@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "roboto";
+}
+#app {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #000;
+  background-color: #fece33;
+}
+/* .player {
+} */
+.player__bg {
+  width: 120px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.player__img {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 70px;
+  height: auto;
+  object-fit: contain;
+  z-index: 2;
+  transform: translateX(-50%);
+}
+/* .background {
+  margin-top: 70px;
+} */
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+}
+.header__left {
+  margin-left: 18px;
+}
+.header__right {
+  display: flex;
+  gap: 32px;
+}
+.header__exit {
+  display: inline-block;
+  padding: 4px 14px;
+  cursor: pointer;
+}
+.header__right-wrapper {
+  margin-right: 18px;
+}
+.hook-wire {
+  position: absolute;
+  top: 54px;
+  left: 48.4%;
+  width: 2px;
+  height: 20px;
+  z-index: 2;
+  transform-origin: top center;
+  background-color: #5f3926;
+}
+.hook {
+  position: absolute;
+  top: 100%;
+  right: -25px;
+  transform: rotate(2.6deg);
+  width: 50px;
+}
+.hook.small {
+  top: 100%;
+  right: -15px;
+  width: 34px;
+}
+.hook.small-medium {
+  top: 100%;
+  right: -24px;
+  width: 60px;
+}
+.hook.medium {
+  top: 100%;
+  right: -36px;
+  width: 70px;
+}
+.hook.large {
+  top: 100%;
+  right: -40px;
+  width: 80px;
+}
+.start-line {
+  position: relative;
+  z-index: 2;
+  height: 2px;
+  background-color: #000;
+}
+.background {
+  padding-top: 100%;
+  position: relative;
+  background-image: url("../public/images/background_1_out.jpeg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+}
+.item {
+  position: absolute;
+  top: 30%;
+  left: 46%;
+}
+/* Item */
+.stone-1{
+  background-repeat: no-repeat;
+  background-image: url('../public/images/da_1.png');
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+}
+.stone-2{
+  background-repeat: no-repeat;
+  background-image: url('../public/images/da_2.png');
+  width: 38px;
+  height: 38px;
+  background-size: contain;
+}
+.gold-4 {
+  background-repeat: no-repeat;
+  background-image: url('../public/images/vang_1.png');
+  width: 80px;
+  height: 80px;
+  background-size: contain;
+}
+.gold-3{
+  background-repeat: no-repeat;
+  background-image: url('../public/images/vang_2.png');
+  width: 70px;
+  height: 70px;
+  background-size: contain;
+}
+.gold-2{
+  background-repeat: no-repeat;
+  background-image: url('../public/images/vang_3.png');
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+}
+.gold-1{
+  background-repeat: no-repeat;
+  background-image: url('../public/images/vang_4.png');
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+}
+/* End */
+.item__img {
+  width: 30px;
+  height: auto;
+  object-fit: contain;
+  
+}
+/* .goldMinerContainer {
+  width: 100%;
+  height: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #000;
+  display: block;
+} */
