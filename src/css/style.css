@@ -160,6 +160,13 @@ html {
   height: 30px;
   background-size: contain;
 }
+.mystery-bag{
+  background-repeat: no-repeat;
+  background-image: url('../public/images/mysteryBag.png');
+  width: 46px;
+  height: 46px;
+  background-size: contain;
+}
 /* End */
 .item__img {
   width: 30px;

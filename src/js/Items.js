@@ -26,7 +26,7 @@ export default [
   {
     id: "sm-gold",
     img: "gapvang_3",
-    size: "small-meidum",
+    size: "small-medium",
     time: 2000,
   },
   {
@@ -34,5 +34,11 @@ export default [
     img: "gapvang_3",
     size: "small",
     time: 2000,
+  },
+  {
+    id: "mystery-bag",
+    img: "gapMysteryBag",
+    size: "small",
+    time: 1000,
   },
 ];

@@ -54,5 +54,17 @@ export default [
       bottom: "432px",
       class: "gold-2",
     },
+    {
+      id: "mystery-bag",
+      top: "130px",
+      bottom: "105px",
+      class: "mystery-bag",
+    },
+    {
+      id: "mystery-bag",
+      top: "200px",
+      bottom: "560px",
+      class: "mystery-bag",
+    },
   ]),
 ];
