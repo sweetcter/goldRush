@@ -1,6 +1,150 @@
-import { getItem } from "./src/js/Items";
-console.log(getItem);
-import roundGame from "./src/js/RoundGame";
+// import Items from "./src/js/Items";
+const Items = [
+  {
+    id: "r-stone",
+    img: "gapda_2",
+    size: "small",
+    time: 3000,
+    bonus: 11,
+  },
+  {
+    id: "t-stone",
+    img: "gapda_1",
+    size: "small-medium",
+    time: 3000,
+    bonus: 20,
+  },
+  {
+    id: "l-gold",
+    img: "gapvang_1",
+    size: "large",
+    time: 5000,
+    bonus: 500,
+  },
+  {
+    id: "m-gold",
+    img: "gapvang_2",
+    size: "medium",
+    time: 4000,
+    bonus: 250,
+  },
+  {
+    id: "sm-gold",
+    img: "gapvang_3",
+    size: "small-medium",
+    time: 2000,
+    bonus: 100,
+  },
+  {
+    id: "s-gold",
+    img: "gapvang_3",
+    size: "small",
+    time: 2000,
+    bonus: 50,
+  },
+  {
+    id: "mystery-bag",
+    img: "gapMysteryBag",
+    size: "small",
+    time: 1000,
+    bonus: Math.floor(Math.random() * (800 - 11) + 1) - 11,
+  },
+];
+// import roundGame from "./src/js/RoundGame";
+const roundGame = [
+  [
+    {
+      id: "r-stone",
+      top: "123px",
+      bottom: "154px",
+      class: "stone-2",
+    },
+    {
+      id: "r-stone",
+      top: "138px",
+      bottom: "565px",
+      class: "stone-2",
+    },
+    {
+      id: "t-stone",
+      top: "389px",
+      bottom: "370px",
+      class: "stone-1",
+    },
+    {
+      id: "t-stone",
+      top: "280px",
+      bottom: "484px",
+      class: "stone-1",
+    },
+    {
+      id: "l-gold",
+      top: "334px",
+      bottom: "423px",
+      class: "gold-4",
+    },
+    {
+      id: "l-gold",
+      top: "273px",
+      bottom: "150px",
+      class: "gold-4",
+    },
+    {
+      id: "sm-gold",
+      top: "370px",
+      bottom: "670px",
+      class: "gold-2",
+    },
+    {
+      id: "sm-gold",
+      top: "420px",
+      bottom: "137px",
+      class: "gold-2",
+    },
+    {
+      id: "sm-gold",
+      top: "190px",
+      bottom: "432px",
+      class: "gold-2",
+    },
+    {
+      id: "mystery-bag",
+      top: "130px",
+      bottom: "105px",
+      class: "mystery-bag",
+    },
+    {
+      id: "mystery-bag",
+      top: "200px",
+      bottom: "560px",
+      class: "mystery-bag",
+    },
+    {
+      id: "s-gold",
+      top: "190px",
+      bottom: "525px",
+      class: "gold-1",
+    },
+    {
+      id: "s-gold",
+      top: "175px",
+      bottom: "586px",
+      class: "gold-1",
+    },
+    {
+      id: "s-gold",
+      top: "200px",
+      bottom: "200px",
+      class: "gold-1",
+    },
+    {
+      id: "s-gold",
+      top: "260px",
+      bottom: "260px",
+      class: "gold-1",
+    },
+  ],
+];
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 const app = $("#app");
@@ -319,7 +463,6 @@ class GoldMiner {
           // Kiểm tra xem hook có chạm vao item nào không
           const [iscollide, id, item] = this.handlePullItem();
           if (iscollide) {
-            let Items = getItem();
             const findItem = Items.find((item) => item.id === id);
             this.isPullUp = true;
             this.pullTime = 4000;
