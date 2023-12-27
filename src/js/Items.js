@@ -1,4 +1,4 @@
-export default [
+const Items  = [
   {
     id: "r-stone",
     img: "gapda_2",
@@ -42,3 +42,4 @@ export default [
     time: 1000,
   },
 ];
+export default Items;
