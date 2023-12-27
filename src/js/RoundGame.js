@@ -1,5 +1,5 @@
-export default [
-  (roundOne = [
+const roundGame = [
+  [
     {
       id: "r-stone",
       top: "123px",
@@ -66,5 +66,31 @@ export default [
       bottom: "560px",
       class: "mystery-bag",
     },
-  ]),
+    {
+      id: "s-gold",
+      top: "190px",
+      bottom: "525px",
+      class: "gold-1",
+    },
+    {
+      id: "s-gold",
+      top: "175px",
+      bottom: "586px",
+      class: "gold-1",
+    },
+    {
+      id: "s-gold",
+      top: "200px",
+      bottom: "200px",
+      class: "gold-1",
+    },
+    {
+      id: "s-gold",
+      top: "260px",
+      bottom: "260px",
+      class: "gold-1",
+    },
+  ],
 ];
+
+export default roundGame;

@@ -74,18 +74,18 @@ html {
 .hook {
   position: absolute;
   top: 100%;
-  right: -25px;
+  right: -38.3px;
   transform: rotate(2.6deg);
-  width: 50px;
+  width: 80px;
 }
 .hook.small {
   top: 100%;
   right: -15px;
-  width: 34px;
+  width: 40px;
 }
 .hook.small-medium {
   top: 100%;
-  right: -24px;
+  right: -28px;
   width: 60px;
 }
 .hook.medium {
@@ -156,8 +156,8 @@ html {
 .gold-1{
   background-repeat: no-repeat;
   background-image: url('../public/images/vang_4.png');
-  width: 30px;
-  height: 30px;
+  width: 18px;
+  height: 18px;
   background-size: contain;
 }
 .mystery-bag{

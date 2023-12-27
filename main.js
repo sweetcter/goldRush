@@ -1,48 +1,5 @@
 import Items from "./src/js/Items";
-// const Items = [
-//   {
-//     id: "r-stone",
-//     img: "gapda_2",
-//     size: "small",
-//     time: 3000,
-//   },
-//   {
-//     id: "t-stone",
-//     img: "gapda_1",
-//     size: "small-medium",
-//     time: 3000,
-//   },
-//   {
-//     id: "l-gold",
-//     img: "gapvang_1",
-//     size: "large",
-//     time: 5000,
-//   },
-//   {
-//     id: "m-gold",
-//     img: "gapvang_2",
-//     size: "medium",
-//     time: 4000,
-//   },
-//   {
-//     id: "sm-gold",
-//     img: "gapvang_3",
-//     size: "small-medium",
-//     time: 2000,
-//   },
-//   {
-//     id: "s-gold",
-//     img: "gapvang_3",
-//     size: "small",
-//     time: 2000,
-//   },
-//   {
-//     id: "mystery-bag",
-//     img: "gapMysteryBag",
-//     size: "small",
-//     time: 1000,
-//   },
-// ];
+import roundGame from "./src/js/RoundGame";
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 const app = $("#app");
@@ -157,6 +114,10 @@ class GoldMiner {
   setPullTime(time) {
     this.pullTime = time;
   }
+  plusMoney(findItem) {
+    this.money += findItem.bonus;
+    moneyContainer.textContent = `$${this.money}`;
+  }
   getRandomPosition() {
     // const marginBottom = 100;
     // const limitfirstFloor = 172;
@@ -207,8 +168,21 @@ class GoldMiner {
     //   }
     //   this.items.push(newItem);
     // }
-    // let html = ``;
     // this.items.forEach((item) => {});
+    let html = ``;
+    const roundOne = roundGame[0];
+    roundOne.forEach((item) => {
+      html += `
+      <div
+      class="item ${item.class}"
+      data-id="${item.id}"
+      style="position: absolute; top: ${item.top}; left: ${
+        item.bottom
+      };padding:${item.class === "gold-1" ? 10 : 0}px">
+      </div>
+      `;
+    });
+    mapMiner.innerHTML = html;
   }
   handleCountDown() {
     let time = 59;
@@ -234,7 +208,7 @@ class GoldMiner {
         return [true, item.dataset.id, item];
       }
     }
-    return [false];
+    return [false, "", ""];
   }
   handleEvent() {
     const wireLength = hookWire.offsetHeight;
@@ -339,6 +313,7 @@ class GoldMiner {
               hook.play();
             });
             clearInterval(this.dropHook);
+            return;
           }
           // Kiểm tra xem hook có chạm vao item nào không
           const [iscollide, id, item] = this.handlePullItem();
@@ -346,10 +321,14 @@ class GoldMiner {
             const findItem = Items.find((item) => item.id === id);
             this.isPullUp = true;
             this.pullTime = 4000;
+            console.log(findItem);
             handleHook.src = `./src/public/images/${findItem.img}.png`;
             handleHook.classList.add(`${findItem.size}`);
+
             audio.src = "./src/public/sounds/up.mp3";
-            audio.play();
+            audio.addEventListener("canplaythrough", () => {
+              audio.play();
+            });
             this.pullUp = setInterval(() => {
               audio.play();
             }, 1000);
@@ -374,10 +353,13 @@ class GoldMiner {
               this.shoot.pause();
               clearInterval(this.pullUp);
               audio.src = "./src/public/sounds/upfinish.mp3";
-              audio.play();
+              audio.addEventListener("canplaythrough", () => {
+                audio.play();
+              });
               setTimeout(() => {
                 hook.play();
                 this.setDrop(false);
+                this.plusMoney(findItem);
                 this.isPull = false;
               }, 200);
               handleHook.classList.remove(`${findItem.size}`);
@@ -404,7 +386,7 @@ class GoldMiner {
       // Hàm sử lý sự kiện
       this.handleEvent();
       // Generate items
-      // this.generateItems();
+      this.generateItems();
       // Count down
       this.handleCountDown();
     });
