@@ -1,4 +1,5 @@
-import Items from "./src/js/Items";
+import { getItem } from "./src/js/Items";
+console.log(getItem);
 import roundGame from "./src/js/RoundGame";
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
@@ -318,6 +319,7 @@ class GoldMiner {
           // Kiểm tra xem hook có chạm vao item nào không
           const [iscollide, id, item] = this.handlePullItem();
           if (iscollide) {
+            let Items = getItem();
             const findItem = Items.find((item) => item.id === id);
             this.isPullUp = true;
             this.pullTime = 4000;
