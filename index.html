@@ -10,6 +10,8 @@
   <body>
     <div id="app">
       <audio id="audio" src=""></audio>
+      <audio id="boom" src=""></audio>
+      <audio id="status" src=""></audio>
       <header class="header">
         <div class="header__left">
           <div class="header__money">
@@ -32,17 +34,18 @@
             alt=""
             class="player__img"
           />
+          <div class="items"></div>
         </div>
 
         <div class="header__right">
-          <button class="header__exit">Thoát Level</button>
+          <button class="header__exit">Exit</button>
           <div class="header__right-wrapper">
             <div class="header__time">
               <span class="header__time-title">Thời Gian:</span>
               <span class="header__time-number">60</span>
             </div>
             <div class="header__level">
-              <span class="header__level-title">Cấp Độ</span>
+              <span class="header__level-title">Cấp Độ:</span>
               <span class="header__level-number">1</span>
             </div>
           </div>
@@ -50,35 +53,22 @@
         <div class="hook-wire">
           <img src="./src/public/images/moc_out.png" alt="" class="hook" />
         </div>
+        <span class="header__stength">STRENGTH</span>
+        <span class="header__bonus">$</span>
       </header>
       <div class="start-line"></div>
-      <div class="background">
-        <!-- <div
-          class="item stone-2"
-          data-id="r-stone"
-          style="position: absolute; top: 123px; left: 154px"
-        ></div>
-        <div
-          class="item stone-1"
-          data-id="t-stone"
-          style="position: absolute; top: 389px; left: 370px"
-        ></div>
-        <div
-          class="item gold-4"
-          data-id="l-gold"
-          style="position: absolute; top: 334px; left: 423px"
-        ></div>
-        <div
-          class="item mystery-bag"
-          data-id="mystery-bag"
-          style="position: absolute; top: 200px; left: 560px"
-        ></div>
-        <div
-        class="item gold-1"
-        data-id="sm-gold"
-        style="position: absolute; top: 334px; left: 423px"
-      ></div> -->
+      <div class="background"></div>
+      <div class="start">
+        <div class="miner">
+          <div class="gold-blur"></div>
+          <div class="gold"></div>
+          <div class="play">Chơi</div>
+        </div>
+        <div class="guide"></div>
       </div>
+    </div>
+    <div class="show">
+      <div class="show__target">$650</div>
     </div>
     <script type="module" src="./main.js"></script>
   </body>
