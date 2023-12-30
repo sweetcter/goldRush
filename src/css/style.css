@@ -19,6 +19,9 @@ html {
   border: 1px solid #000;
   background-color: #f4ce14;
 }
+#container {
+  position: relative;
+}
 /* .player {
 } */
 .player__bg {
@@ -160,7 +163,7 @@ html {
   position: absolute;
   top: 54px;
   left: 48.4%;
-  width: 2px;
+  width: 2.6px;
   height: 20px;
   z-index: 2;
   transform-origin: top center;
@@ -311,16 +314,29 @@ html {
   height: 250px;
   background-size: contain;
 }
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .gold-blur {
   position: absolute;
   top: 1rem;
-  left: 0rem;
+  left: 1rem;
   width: 300px;
   height: 300px;
   background-color: #eedd00;
   opacity: 0.8;
   border-radius: 50rem;
   filter: blur(50px);
+  animation: zoomIn 2s linear infinite;
 }
 .play {
   position: absolute;
@@ -351,22 +367,166 @@ html {
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 100vh;
   background-image: url("../public/images/show_target-removebg.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 75% 100%;
   background-position: top center;
   z-index: 999;
+  opacity: 1;
+  transition: opacity 1s linear;
 }
 .show__target {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  font-size: 2rem;
-  padding: 14px 50px;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  padding: 64px 44px 30px 44px;
   display: inline-block;
+  border-radius: 8px;
+  border: 6px solid #e68200e6;
+  color: #eedd00;
   background-color: #9b4e00;
-  color: #07c800;
   user-select: none;
+  animation: scaleOut 1s linear;
+}
+.show__target-number {
+  color: #07c800;
+  display: block;
+  text-align: center;
+  margin-top: 24px;
+}
+.show__target-title {
+  text-align: center;
+  padding: 0;
+}
+.store {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background-image: url("../public/images/store_background.jpg");
+  background-repeat: no-repeat;
+  opacity: 0;
+  display: none;
+  /* transition: opacity 1s linear; */
+}
+.store__container {
+  width: 800px;
+  height: auto;
+  margin: 0 auto;
+}
+.hidden-item {
+  pointer-events: none;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 64px;
+  margin-top: 64px;
+}
+.title__text {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 64px;
+  object-fit: contain;
+  background-image: url("../public/images/store_title.png");
+}
+.title__next-game {
+  display: inline-block;
+  background-color: #006600;
+  color: #00fc00;
+  border: 3px solid #0a4903;
+  text-decoration: none;
+  min-width: 150px;
+  height: 50px;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 50px;
+}
+.title__next-game:hover {
+  opacity: 0.8;
+}
+.main {
+  margin-top: 100px;
+}
+.store__list {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 0 24px;
+}
+.store__list-item {
+  position: relative;
+  bottom: 22px;
+  width: 70px;
+  height:70px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.store__list-item:hover {
+  cursor: pointer;
+}
+.store__list-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 54px;
+}
+.store__list-item.tnt {
+  background-image: url("../public/images/mine_out.png");
+}
+.store__list-item.clover {
+  background-image: url("../public/images/clover_out.png");
+}
+.store__list-item-price {
+  position: absolute;
+  top: calc(100% + 20px);
+  left: 0;
+  color: #0C9B06;
+  font-size: 1.7rem;
+  user-select: none;
+}
+.trader {
+  position: relative;
+  background-image: url("../public/images/trader-removebg.png");
+  width: 162px;
+  height: 164px;
+  background-size: contain;
+  background-position: top center;
+}
+.trader.happy{
+  background-image: url("../public/images/traderSmile-removebg.png");
+}
+.trader.unhappy{
+  background-image: url("../public/images/traderAngry-removebg.png");
+}
+.trader__chat {
+  position: absolute;
+  bottom: 50%;
+  right: -8px;
+  background-image: url("../public/images/chat_out.png");
+  background-repeat: no-repeat;
+  width: 800px;
+  height: 200px;
+  transform: scale(0.6);
+  margin-left: auto;
+}
+.trader__chat-text {
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  text-align: center;
+  font-size: 2rem;
+}
+.store__table {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../public/images/table.png");
+  background-size: 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
 }

@@ -10,7 +10,7 @@
   <body>
     <div id="app">
       <audio id="audio" src=""></audio>
-      <audio id="boom" src=""></audio>
+      <audio id="boom" src="./src/public/sounds/boom.mp3"></audio>
       <audio id="status" src=""></audio>
       <header class="header">
         <div class="header__left">
@@ -68,7 +68,49 @@
       </div>
     </div>
     <div class="show">
-      <div class="show__target">$650</div>
+      <div class="show__target">
+        <h3 class="show__target-title">Mục tiêu của bạn là</h3>
+        <span class="show__target-number">
+          $650
+        </span>
+      </div>
+    </div>
+    <div class="store">
+      <div class="store__container">
+        <div class="title">
+          <div class="title__text"></div>
+          <div>
+            <a href="#" class="title__next-game">Chơi tiếp</a>
+          </div>
+        </div>
+        <div class="main">
+          <div class="store__list">
+            <div class="store__list-wrapper">
+              <div class="store__list-item tnt">
+                <span class="store__list-item-price">
+                  $43
+                </span>
+              </div>
+              <div class="store__list-item clover">
+                <span class="store__list-item-price">
+                  $43
+                </span>
+              </div>
+            </div>
+            <div class="trader">
+              <div class="trader__chat">
+                <p class="trader__chat-text">
+                  Click vào vật phẩm mà bạn muốn mua. Click vào chơi tiếp khi bạn
+                  đã sẵn sàng.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="store__table">
+            <p class="store__table-info"></p>
+          </div>
+        </div>
+      </div>
     </div>
     <script type="module" src="./main.js"></script>
   </body>

@@ -5,95 +5,98 @@ const roundGame = [
   [
     {
       id: "r-stone",
-      top: "123px",
-      bottom: "154px",
+      top: 123,
+      bottom: 154,
       class: "stone-2",
     },
     {
       id: "r-stone",
-      top: "138px",
-      bottom: "565px",
+      top: 138,
+      bottom: 565,
       class: "stone-2",
     },
     {
       id: "t-stone",
-      top: "389px",
-      bottom: "370px",
+      top: 389,
+      bottom: 370,
       class: "stone-1",
     },
     {
       id: "t-stone",
-      top: "280px",
-      bottom: "484px",
+      top: 280,
+      bottom: 484,
       class: "stone-1",
     },
     {
       id: "l-gold",
-      top: "334px",
-      bottom: "423px",
+      top: 334,
+      bottom: 423,
       class: "gold-4",
     },
     {
       id: "l-gold",
-      top: "273px",
-      bottom: "150px",
+      top: 273,
+      bottom: 150,
       class: "gold-4",
     },
     {
       id: "sm-gold",
-      top: "370px",
-      bottom: "670px",
+      top: 370,
+      bottom: 670,
       class: "gold-2",
     },
     {
       id: "sm-gold",
-      top: "420px",
-      bottom: "137px",
+      top: 420,
+      bottom: 137,
       class: "gold-2",
     },
     {
       id: "sm-gold",
-      top: "190px",
-      bottom: "432px",
+      top: 190,
+      bottom: 432,
       class: "gold-2",
     },
     {
       id: "mystery-bag",
-      top: "130px",
-      bottom: "105px",
+      top: 130,
+      bottom: 105,
       class: "mystery-bag",
     },
     {
       id: "mystery-bag",
-      top: "200px",
-      bottom: "560px",
+      top: 200,
+      bottom: 560,
       class: "mystery-bag",
     },
     {
       id: "s-gold",
-      top: "190px",
-      bottom: "525px",
+      top: 190,
+      bottom: 525,
       class: "gold-1",
     },
     {
       id: "s-gold",
-      top: "175px",
-      bottom: "586px",
+      top: 175,
+      bottom: 586,
       class: "gold-1",
     },
     {
       id: "s-gold",
-      top: "200px",
-      bottom: "200px",
+      top: 200,
+      bottom: 200,
       class: "gold-1",
     },
     {
       id: "s-gold",
-      top: "260px",
-      bottom: "260px",
+      top: 260,
+      bottom: 260,
       class: "gold-1",
     },
   ],
+  [],
+  [],
+  [],
   [],
   [],
   [],
@@ -109,15 +112,24 @@ const audio = $("#audio");
 const boomAudio = $("#boom");
 const statusAudio = $("#status");
 const timeSet = $(".header__time-number");
+const levelNumber = $(".header__level-number");
 const itemContainer = $(".items");
 const bonus = $(".header__bonus");
 const startGame = $(".start");
 const playGame = $(".play");
 const showLevel = $(".show");
+const notfiy = $(".show__target h3");
+const showTarget = $(".show__target-number");
 const exitBtn = $(".header__exit");
+const store = $(".store");
+const nextGamebtn = $(".title__next-game");
+const storeItems = $$(".store__list-item");
+const trader = $(".trader");
+const targetNumber = $(".header__target-number");
 class GoldMiner {
-  money = 0;
+  money = 10000;
   target = 650;
+  isBuy = false;
   isDrop = false;
   pullTime = 2000;
   isPull = false;
@@ -161,8 +173,8 @@ class GoldMiner {
   }
   mysteryBagValue = [
     Math.floor(Math.random() * (800 - 11) + 1) + 11,
-    () => this.getMysteryBag("isEngryDrink"),
-    () => this.getMysteryBag("TNT"),
+    // () => this.getMysteryBag("isEngryDrink"),
+    // () => this.getMysteryBag("TNT"),
   ];
   Items = [
     {
@@ -212,70 +224,11 @@ class GoldMiner {
       img: "gapMysteryBag",
       size: "small",
       time: 1000,
-      bonus:
-        this.mysteryBagValue[
-          Math.floor(
-            Math.random() * (this.mysteryBagValue.length - 1 - 0) + 1
-          ) + 0
-        ],
+      bonus: this.mysteryBagValue[0],
+      // Math.floor(
+      //   Math.random() * (this.mysteryBagValue.length - 1 - 0) + 1
+      // ) + 0
     },
-  ];
-  items = [];
-  itemsType = [
-    {
-      itemName: "round stone",
-      imgName: "da_2",
-      value: this.roundStone,
-      size: "small-medium",
-      type: "gapda_2",
-      minimunQuantity: 3,
-    },
-    {
-      itemName: "triagle stone",
-      value: this.triagleStone,
-      imgName: "da_1",
-      size: "small-medium",
-      type: "gapda_1",
-      minimunQuantity: 3,
-    },
-    {
-      itemName: "small gold",
-      value: this.smallGold,
-      imgName: "vang_4",
-      size: "small",
-      type: "gapvang_2",
-      minimunQuantity: 4,
-    },
-    {
-      itemName: "small medium gold",
-      value: this.smallMediumGold,
-      imgName: "vang_3",
-      size: "small",
-      type: "gapvang_3",
-      minimunQuantity: 3,
-    },
-    {
-      itemName: "large gold",
-      value: this.largeGold,
-      imgName: "vang_1",
-      size: "large",
-      type: "gapvang_1",
-
-      minimunQuantity: 2,
-    },
-    {
-      itemName: "mystery bag",
-      value: this.mysteryBagValue,
-      imgName: "mysteryBag",
-      size: "small",
-      type: "gapMysteryBag",
-      minimunQuantity: Math.floor(Math.random() * (2 - 1) + 1) + 1,
-    },
-    // "triagle stone",
-    // "small gold",
-    // "small medium gold",
-    // "large gold",
-    // "mystery bag",
   ];
   constructor() {}
   setDrop(isDrop) {
@@ -327,18 +280,6 @@ class GoldMiner {
     // return { position, type };
   }
   generateItems() {
-    // const maxItem = this.itemsType.reduce(
-    //   (acc, cur) => acc + cur.minimunQuantity,
-    //   0
-    // );
-    // for (let i = 1; i <= maxItem; i++) {
-    //   let newItem = this.getRandomItem();
-    //   while (this.isPositionOccupied(newItem.position)) {
-    //     newItem = this.getRandomPosition();
-    //   }
-    //   this.items.push(newItem);
-    // }
-    // this.items.forEach((item) => {});
     let html = ``;
     const round = roundGame[this.level];
     round.forEach((item) => {
@@ -346,21 +287,49 @@ class GoldMiner {
       <div
       class="item ${item.class}"
       data-id="${item.id}"
-      style="position: absolute; top: ${item.top}; left: ${
+      style="position: absolute; top: ${item.top}px; left: ${
         item.bottom
-      };padding:${item.class === "gold-1" ? 10 : 0}px">
+      }px;padding:${item.class === "gold-1" ? 10 : 0}px">
       </div>
       `;
     });
     mapMiner.innerHTML = html;
   }
-  handleCountDown() {
-    // let time = 59;
-    // setInterval(() => {
-    //   if (time === 0) time = 59;
-    //   timeSet.textContent = `${time}`;
-    //   time--;
-    // }, 1000);
+  removeSecondClass(element) {
+    const secondIndex = 1;
+    const modifyElement = element.classList[secondIndex];
+
+    element.classList.remove(modifyElement);
+  }
+  getSecondClassName(element) {
+    const secondIndex = 1;
+    return element.classList[secondIndex];
+  }
+  openStore() {
+    this.removeSecondClass(trader);
+    store.style.display = "block";
+    store.style.opacity = 1;
+  }
+  closeStore() {
+    if (!this.isBuy) {
+      statusAudio.src = "./src/public/sounds/hvBad.mp3";
+      statusAudio.addEventListener("canplaythrough", () => {
+        statusAudio.play();
+      });
+      this.removeSecondClass(trader);
+      trader.classList.add("unhappy");
+    } else {
+      statusAudio.src = "./src/public/sounds/hvNice.mp3";
+      statusAudio.addEventListener("canplaythrough", () => {
+        statusAudio.play();
+      });
+      this.removeSecondClass(trader);
+      trader.classList.add("happy");
+    }
+    setTimeout(() => {
+      // store.style.opacity = 0;
+      store.style.display = "none";
+    }, 1000);
   }
   handlePullItem() {
     const allItem = $$(".item");
@@ -395,13 +364,85 @@ class GoldMiner {
       reslove();
     });
   }
-  setSrc(name) {
-    audio.pause();
-    audio.src = "";
+  loadLevel() {
+    levelNumber.textContent = this.level;
+  }
+  restartGame() {
+    this.level = 1;
+    this.target = 650;
+    this.TNT = 0;
+    this.isBuy = false;
+    this.isClover = false;
+    this.isEngryDrink = false;
+    this.isPolishWater = false;
+    this.isStoneBook = false;
+  }
+  loadGame() {
+    moneyContainer.textContent = `$${this.money}`;
+    // Hàm sử lý sự kiện
+    // this.handleEvent();
+    // Generate items
+    this.generateItems();
+    // Load auxiliary items
+    this.loadGunPowder();
+    // Load level
+    this.loadLevel();
+    // Load target money
+    targetNumber.textContent = `$${this.target.toFixed()}`;
+  }
+  showMenu() {
+    startGame.style.display = "block";
+    startGame.style.opacity = 1;
+  }
+  activePassLevel(isShow) {
+    isShow = isShow ? "block" : "none";
+    showLevel.style.display = isShow;
+  }
+  setMessageTarget(message, target) {
+    notfiy.textContent = message;
+    showTarget.textContent = `${target}`;
+  }
+  showPassLevel(message, target = "", isWin, isNewRound) {
+    let sound = "";
+    if (isWin) sound = "win";
+
+    if (isNewRound) sound = "goal";
+
+    audio.src = `./src/public/sounds/${sound}.mp3`;
+    if (isNewRound) {
+      statusAudio.addEventListener("ended", () => {
+        audio.play();
+      });
+    } else {
+      audio.play();
+    }
+    this.setMessageTarget(message, target);
+    this.activePassLevel(true);
+  }
+  closeShowPassLevel() {
+    this.activePassLevel(false);
+  }
+  winGame() {
+    this.level++;
+    this.isBuy = false;
+    const nextTarget = 0.84;
+    this.target += this.target * nextTarget;
+    this.showPassLevel("Bạn đã tiến lên cấp độ kế tiếp", "", true, false);
     setTimeout(() => {
-      boomAudio.src = `./src/public/sounds/${name}.mp3`;
-      boomAudio.play();
-    }, 100);
+      this.closeShowPassLevel();
+      this.openStore();
+    }, 2000);
+  }
+  loseGame() {
+    this.restartGame();
+    this.showPassLevel("Bạn đã không hoàn thành nhiệm vụ", "", false);
+    setTimeout(() => {
+      this.closeShowPassLevel();
+      this.setMessageTarget("Mục tiêu của bạn là", `$${this.target}`);
+      this.showMenu();
+      this.activePassLevel(true);
+      this.menu();
+    }, 2000);
   }
   handleEvent() {
     const wireLength = hookWire.offsetHeight;
@@ -444,7 +485,7 @@ class GoldMiner {
     document.addEventListener("keyup", (e) => {
       if (e.key === "ArrowUp" && this.TNT >= 1 && this.isPullUp === true) {
         handleHook.src = "./src/public/images/moc_out.png";
-        this.setSrc("boom");
+        boomAudio.play();
         this.TNT--;
         const firstChild = 0;
         const modifyIndex = 1;
@@ -482,7 +523,6 @@ class GoldMiner {
           duration: 2000,
           iterations: 1,
         });
-
         // console.log(map.getBoundingClientRect());
         this.dropHook = setInterval(() => {
           const hookLocation = handleHook.getBoundingClientRect();
@@ -518,8 +558,6 @@ class GoldMiner {
             const findItem = this.Items.find((item) => item.id === id);
             this.isPullUp = true;
             this.pullTime = 4000;
-
-            console.log(this.mysteryBagValue);
 
             handleHook.src = `./src/public/images/${findItem.img}.png`;
             handleHook.classList.add(`${findItem.size}`);
@@ -593,56 +631,72 @@ class GoldMiner {
       }
     });
     // End
+    // PrevenDefault contextmenu;
     app.addEventListener("contextmenu", function (e) {
       e.preventDefault();
     });
     app.addEventListener("mouseup", (e) => {});
-  }
-  loadGame() {
-    this.closeShowPassLevel();
-    // Hàm sử lý sự kiện
-    this.handleEvent();
-    // Generate items
-    this.generateItems();
-    // Count down
-    // this.handleCountDown();
-    // Load item
-    this.loadGunPowder();
-  }
-  showPassLevel() {
-    audio.src = "./src/public/sounds/goal.mp3";
-    audio.play();
-    showLevel.style.display = "block";
-  }
-  closeShowPassLevel() {
-    showLevel.style.display = "none";
+    // End
+
+    // Buy items
+    for (const item of storeItems) {
+      item.addEventListener("click", () => {
+        if (!this.isBuy) {
+          this.isBuy = true;
+        }
+        const typeItem = this.getSecondClassName(item);
+        item.remove();
+      });
+    }
+    // End
+    // Next game
+    nextGamebtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      this.loadGame();
+      this.showPassLevel("Mục tiêu của bạn là", `$${this.target.toFixed()}`, false, true);
+      this.closeStore();
+      audio.addEventListener("ended", () => {
+        this.closeShowPassLevel();
+      });
+    });
+    // End
+
+    const handleCountDown = () => {
+      let time = 59;
+      let stopTime = setInterval(() => {
+        timeSet.textContent = `${time}`;
+        time--;
+      }, 1000);
+      if (time === 0) {
+        if (this.money >= this.target) {
+          this.winGame();
+        } else {
+          this.loseGame();
+        }
+        clearInterval(stopTime);
+      }
+    };
+    handleCountDown();
   }
   menu() {
     playGame.addEventListener("click", () => {
       startGame.style.opacity = "0";
       audio.src = "./src/public/sounds/goal.mp3";
-      audio.addEventListener("canplaythrough", () => {
-        audio.play();
-      });
+      audio.play();
       setTimeout(() => {
         startGame.style.display = "none";
 
+        this.handleEvent();
         this.loadGame();
+        this.closeShowPassLevel();
       }, 2000);
 
       exitBtn.addEventListener("click", () => {
-        this.level++;
         if (this.money >= this.target) {
-          console.log("Bạn đã qua màn");
+          this.winGame();
         } else {
-          console.log("Bạn chưa hoàn thành nhiệm vụ");
+          this.loseGame();
         }
-
-        // this.loadGame();
-        // this.showPassLevel();
-        // audio.addEventListener("ended", () => {
-        //   this.closeShowPassLevel();
-        // });
       });
     });
   }
@@ -650,8 +704,6 @@ class GoldMiner {
     document.addEventListener("DOMContentLoaded", () => {
       // Start game
       this.menu();
-
-      console.log(this.mysteryBagValue);
     });
   }
 }
@@ -659,55 +711,7 @@ class GoldMiner {
 const game = new GoldMiner();
 game.start();
 
-const html = ` <header class="header">
-<div class="header__left">
-  <div class="header__money">
-    <span class="header__money-title">Tiền:</span>
-    <span class="header__number">$650</span>
-  </div>
-  <div class="header__target">
-    <span class="header__target-title">Mục tiêu:</span>
-    <span class="header__target-number">$650</span>
-  </div>
-</div>
-<div class="player">
-  <img
-    src="./src/public/images/background_out.png"
-    alt=""
-    class="player__bg"
-  />
-  <img
-    src="./src/public/images/player_out.png"
-    alt=""
-    class="player__img"
-  />
-</div>
-
-<div class="header__right">
-  <button class="header__exit">Thoát</button>
-  <div class="header__right-wrapper">
-    <div class="header__time">
-      <span class="header__time-title">Thời Gian</span>
-      <span class="header__time-number">60</span>
-    </div>
-    <div class="header__level">
-      <span class="header__level-title">Cấp Độ</span>
-      <span class="header__level-number">1</span>
-    </div>
-  </div>
-</div>
-<div class="hook-wire">
-  <img src="./src/public/images/moc.png" alt="" class="hook">
-</img>
-</header>
-<div class="start-line"></div>
-<div class="background">
-<img
-  src="./src/public/images/background_1_out.jpeg"
-  alt=""
-  class="background__img"
-/>
-</div>`;
+const html = ``;
 const render = (item) => {
   app.innerHTML = item;
 };
