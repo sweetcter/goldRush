@@ -1,102 +1,432 @@
 // import Items from "./src/js/Items";
 // import roundGame from "./src/js/RoundGame";
+"use strict";
 const roundGame = [
   [],
   [
     {
       id: "r-stone",
-      top: 123,
-      bottom: 154,
+      top: 27,
+      left: 74,
       class: "stone-2",
     },
     {
       id: "r-stone",
-      top: 138,
-      bottom: 565,
+      top: 25,
+      left: 20,
       class: "stone-2",
     },
     {
       id: "t-stone",
-      top: 389,
-      bottom: 370,
+      top: 56,
+      left: 61,
       class: "stone-1",
     },
     {
       id: "t-stone",
-      top: 280,
-      bottom: 484,
+      top: 76,
+      left: 47,
       class: "stone-1",
     },
     {
       id: "l-gold",
-      top: 334,
-      bottom: 423,
+      top: 52,
+      left: 19,
       class: "gold-4",
     },
     {
       id: "l-gold",
-      top: 273,
-      bottom: 150,
+      top: 65,
+      left: 53,
       class: "gold-4",
     },
     {
       id: "sm-gold",
-      top: 370,
-      bottom: 670,
+      top: 30,
+      left: 58,
       class: "gold-2",
     },
     {
       id: "sm-gold",
-      top: 420,
-      bottom: 137,
+      top: 72,
+      left: 86,
       class: "gold-2",
     },
     {
       id: "sm-gold",
-      top: 190,
-      bottom: 432,
+      top: 82,
+      left: 20,
       class: "gold-2",
     },
     {
       id: "mystery-bag",
-      top: 130,
-      bottom: 105,
+      top: 25,
+      left: 13,
       class: "mystery-bag",
     },
     {
       id: "mystery-bag",
-      top: 200,
-      bottom: 560,
+      top: 39,
+      left: 70,
       class: "mystery-bag",
     },
     {
       id: "s-gold",
-      top: 190,
-      bottom: 525,
+      top: 34,
+      left: 74,
       class: "gold-1",
     },
     {
       id: "s-gold",
-      top: 175,
-      bottom: 586,
+      top: 36,
+      left: 66,
       class: "gold-1",
     },
     {
       id: "s-gold",
-      top: 200,
-      bottom: 200,
+      top: 38,
+      left: 25,
       class: "gold-1",
     },
     {
       id: "s-gold",
-      top: 260,
-      bottom: 260,
+      top: 51,
+      left: 32,
       class: "gold-1",
+    },
+    {
+      map: "map-1",
     },
   ],
-  [],
-  [],
-  [],
+  [
+    {
+      id: "sm-gold",
+      top: 75,
+      left: 79,
+      class: "gold-2",
+    },
+    {
+      id: "sm-gold",
+      top: 57,
+      left: 64,
+      class: "gold-2",
+    },
+    {
+      id: "sm-gold",
+      top: 34,
+      left: 7,
+      class: "gold-2",
+    },
+    {
+      id: "s-gold",
+      top: 25,
+      left: 73,
+      class: "gold-1",
+    },
+    {
+      id: "s-gold",
+      top: 44,
+      left: 78,
+      class: "gold-1",
+    },
+    {
+      id: "s-gold",
+      top: 27,
+      left: 59,
+      class: "gold-1",
+    },
+    {
+      id: "s-gold",
+      top: 39,
+      left: 61,
+      class: "gold-1",
+    },
+    {
+      id: "s-gold",
+      top: 53,
+      left: 33,
+      class: "gold-1",
+    },
+    {
+      id: "s-gold",
+      top: 36,
+      left: 13,
+      class: "gold-1",
+    },
+    {
+      id: "l-gold",
+      top: 78,
+      left: 27,
+      class: "gold-4",
+    },
+    {
+      id: "l-gold",
+      top: 72,
+      left: 9,
+      class: "gold-4",
+    },
+    {
+      id: "r-stone",
+      top: 66,
+      left: 20,
+      class: "stone-2",
+    },
+    {
+      id: "r-stone",
+      top: 64,
+      left: 37,
+      class: "stone-2",
+    },
+    {
+      id: "r-stone",
+      top: 28,
+      left: 64,
+      class: "stone-2",
+    },
+    {
+      id: "t-stone",
+      top: 38,
+      left: 15,
+      class: "stone-1",
+    },
+    {
+      id: "t-stone",
+      top: 58,
+      left: 7,
+      class: "stone-1",
+    },
+    {
+      id: "t-stone",
+      top: 56,
+      left: 26,
+      class: "stone-1",
+    },
+    {
+      id: "t-stone",
+      top: 68,
+      left: 52,
+      class: "stone-1",
+    },
+    {
+      map: "map-2",
+    },
+  ],
+  [
+    {
+      id: "l-gold",
+      top: 63,
+      left: 1,
+      class: "gold-4",
+    },
+    {
+      id: "s-gold",
+      top: 24,
+      left: 24,
+      class: "gold-1",
+    },
+    {
+      id: "s-gold",
+      top: 22,
+      left: 18,
+      class: "gold-1",
+    },
+    {
+      id: "s-gold",
+      top: 30,
+      left: 18,
+      class: "gold-1",
+    },
+    {
+      id: "s-gold",
+      top: 41,
+      left: 61,
+      class: "gold-1",
+    },
+    {
+      id: "sm-gold",
+      top: 49,
+      left: 15,
+      class: "gold-2",
+    },
+    {
+      id: "sm-gold",
+      top: 55,
+      left: 68,
+      class: "gold-2",
+    },
+    {
+      id: "s-gold",
+      top: 41,
+      left: 81,
+      class: "gold-2",
+    },
+    {
+      id: "r-stone",
+      top: 67,
+      left: 66,
+      class: "stone-2",
+    },
+    {
+      id: "r-stone",
+      top: 48,
+      left: 46,
+      class: "stone-2",
+    },
+    {
+      id: "r-stone",
+      top: 41,
+      left: 39,
+      class: "stone-2",
+    },
+    {
+      id: "t-stone",
+      top: 56,
+      left: 75,
+      class: "stone-1",
+    },
+    {
+      id: "t-stone",
+      top: 45,
+      left: 74,
+      class: "stone-1",
+    },
+    {
+      id: "t-stone",
+      top: 55,
+      left: 59,
+      class: "stone-1",
+    },
+    {
+      id: "t-stone",
+      top: 58,
+      left: 21,
+      class: "stone-1",
+    },
+    {
+      id: "diamond",
+      top: 66,
+      left: 72,
+      class: "diamond",
+    },
+    {
+      id: "mystery-bag",
+      top: 51,
+      left: 53,
+      class: "mystery-bag",
+    },
+
+    {
+      map: "map-2",
+    },
+  ],
+  [
+    {
+      id: "mystery-bag",
+      top: 68,
+      left: 44,
+      class: "mystery-bag",
+    },
+    {
+      id: "mystery-bag",
+      top: 49,
+      left: 26,
+      class: "mystery-bag",
+    },
+    {
+      id: "mystery-bag",
+      top: 40,
+      left: 73,
+      class: "mystery-bag",
+    },
+    {
+      id: "mystery-bag",
+      top: 53,
+      left: 65,
+      class: "mystery-bag",
+    },
+    {
+      id: "m-gold",
+      top: 71,
+      left: 54,
+      class: "gold-3",
+    },
+    {
+      id: "m-gold",
+      top: 67,
+      left: 30,
+      class: "gold-3",
+    },
+    {
+      id: "t-stone",
+      top: 76,
+      left: 21,
+      class: "stone-1",
+    },
+    {
+      id: "t-stone",
+      top: 34,
+      left: 78,
+      class: "stone-1",
+    },
+    {
+      id: "t-stone",
+      top: 32,
+      left: 24,
+      class: "stone-1",
+    },
+    {
+      id: "r-stone",
+      top: 56,
+      left: 58,
+      class: "stone-2",
+    },
+    {
+      id: "sm-gold",
+      top: 49,
+      left: 57,
+      class: "gold-2",
+    },
+    {
+      id: "s-gold",
+      top: 27,
+      left: 22,
+      class: "gold-1",
+    },
+    {
+      id: "s-gold",
+      top: 39,
+      left: 68,
+      class: "gold-1",
+    },
+    {
+      id: "s-gold",
+      top: 33,
+      left: 66,
+      class: "gold-1",
+    },
+    {
+      id: "pig",
+      top: 60,
+      left: 60,
+      itemScaleX: true,
+      class: "pig",
+    },
+    {
+      id: "pig",
+      top: 56,
+      left: 68,
+      class: "pig",
+    },
+    {
+      id: "pig",
+      top: 44,
+      left: 27,
+      class: "pig",
+    },
+    {
+      map: "map-1",
+    },
+  ],
   [],
   [],
   [],
@@ -123,9 +453,56 @@ const showTarget = $(".show__target-number");
 const exitBtn = $(".header__exit");
 const store = $(".store");
 const nextGamebtn = $(".title__next-game");
-const storeItems = $$(".store__list-item");
 const trader = $(".trader");
 const targetNumber = $(".header__target-number");
+const strengthNotify = $(".header__stength");
+const maxMysteryBag = 3;
+const minMysteryBag = 1;
+const storeList = $(".store__list-wrapper");
+const inStock = 3;
+const itemStoreInfo = $(".store__table-info");
+let _This;
+const player = $(".player__img");
+
+const elements = $$(".myElement");
+for (const element of elements) {
+  element.addEventListener("mousedown", (e) => {
+    const startX = e.clientX - element.getBoundingClientRect().left;
+    const startY = e.clientY - element.getBoundingClientRect().top;
+
+    const moveHandler = (e) => {
+      const newLeft = e.clientX - startX;
+      const newTop = e.clientY - startY;
+
+      element.style.left = `${newLeft}px`;
+      element.style.top = `${newTop}px`;
+    };
+
+    const upHandler = () => {
+      // Gỡ bỏ các sự kiện khi di chuyển đã kết thúc
+      document.removeEventListener("mousemove", moveHandler);
+      document.removeEventListener("mouseup", upHandler);
+
+      // Trả về top và left của phần tử sau khi di chuyển
+      const mapPositon = mapMiner.getBoundingClientRect();
+      const rect = element.getBoundingClientRect();
+      // const mapTopCorrect = rect.top - mapPositon.top;
+
+      // Tính toán vị trị đúng của map
+      const top = ((rect.top - mapPositon.top) / mapPositon.height) * 100;
+      const left = ((rect.left - mapPositon.left) / mapPositon.width) * 100;
+
+      element.style.top = `${top}%`;
+      element.style.left = `${left}%`;
+      console.log(`Top: ${top}%`);
+      console.log(`Left: ${left}%`);
+    };
+
+    document.addEventListener("mousemove", moveHandler);
+    document.addEventListener("mouseup", upHandler);
+  });
+}
+
 class GoldMiner {
   money = 10000;
   target = 650;
@@ -148,16 +525,210 @@ class GoldMiner {
   skull = 20;
   roundStone = 11;
   triagleStone = 20;
-  TNT = 5;
+  TNT = 1;
   isClover = false;
-  isEngryDrink = false;
+  isEnegryDrink = false;
   isStoneBook = false;
   isPolishWater = false;
+  isNextRound = false;
   pullUp;
   shootEnd;
   shoot;
   dropHook;
-  loadGunPowder() {
+  currentMoney = 0;
+  stopTime;
+  shootCancel;
+  handleFinishPull;
+  hook;
+  itemStore = [
+    {
+      name: "tnt",
+      desc: `Khi bạn kéo 1 vật gì đó bằng móc lên, có thể nhấn phím mũi
+       tên lên để ném thuốc nổ vào để phá hủy ngay lập tức`,
+    },
+    {
+      name: "enegry",
+      desc: `Nước tăng lực, khi có nó, người thợ mỏ sẽ làm việc nhanh hơn trong cấp độ kế tiếp.
+      Đồ uống này chỉ tác dụng trong một cấp độ.`,
+    },
+    {
+      name: "clover",
+      desc: `Nó sẽ làm tăng giá cơ hội nhận được 
+      những món đồ tốt trong cấp kế tiếp Nó chỉ có
+      hiệu lực trong 1 cấp độ.`,
+    },
+    {
+      name: "stone-book",
+      desc: `Quyển sách sẽ nâng giá trị của đá lên 
+      trong cấp độ kế tiếp. Nó chỉ có hiệu lực trong
+     1 cấp độ.`,
+    },
+    {
+      name: "polish",
+      desc: `Kim cương sẽ mang lại nhiều giá trị 
+      hơn. Nó chỉ có hiệu lực trong 1 cấp độ.`,
+    },
+  ];
+  playerSrc = "./src/public/images/player_out.png";
+  hookSrc = "./src/public/images/moc_out.png";
+  Items = [
+    {
+      id: "r-stone",
+      img: "gapda_2",
+      size: "r-stone",
+      time: 4000,
+      bonus: this.roundStone,
+    },
+    {
+      id: "t-stone",
+      img: "gapda_1",
+      size: "t-stone",
+      time: 4000,
+      bonus: this.triagleStone,
+    },
+    {
+      id: "l-gold",
+      img: "gapvang_1",
+      size: "l-gold",
+      time: 6000,
+      bonus: this.largeGold,
+    },
+    {
+      id: "m-gold",
+      img: "gapvang_2",
+      size: "m-gold",
+      time: 4000,
+      bonus: this.mediumGold,
+    },
+    {
+      id: "sm-gold",
+      img: "gapvang_3",
+      size: "sm-gold",
+      time: 1500,
+      bonus: this.smallMediumGold,
+    },
+    {
+      id: "s-gold",
+      img: "gapvang_3",
+      size: "s-gold",
+      time: 1000,
+      bonus: this.smallGold,
+    },
+    {
+      id: "mystery-bag",
+      img: "gapMysteryBag",
+      size: "m-bag",
+      time: 1000,
+    },
+    {
+      id: "diamond",
+      img: "pullDiamond",
+      size: "dia",
+      time: 1000,
+      bonus: this.diamond,
+    },
+    {
+      id: "pig",
+      img: "pullPig",
+      size: "p-pig",
+      time: 1000,
+      bonus: this.pig,
+    },
+  ];
+  mysteryBagValue = {
+    maxMoney: 800,
+    minMoney: 11,
+    getMoney() {
+      return (
+        Math.floor(Math.random() * (this.maxMoney - this.minMoney) + 1) +
+        this.minMoney
+      );
+    },
+    getEnegryDrink() {
+      _This.getMysteryBag("isEnegryDrink");
+    },
+    getTnt() {
+      _This.getMysteryBag("TNT");
+    },
+  };
+  pullItemFinish;
+  plusMoneyTimeOut;
+  constructor() {}
+  getItemByName(element) {
+    const typeItem = this.getSecondClassName(element);
+    return this.itemStore.find((item) => {
+      return item.name === typeItem;
+    });
+  }
+  getCost() {
+    const maxItemStoreCost = this.level <= 6 ? 150 : 300;
+    const minItemStoreCost = 11;
+    return (
+      Math.floor(Math.random() * (maxItemStoreCost - minItemStoreCost) + 1) +
+      minItemStoreCost
+    );
+  }
+  getOutOfStock() {
+    return Math.floor(Math.random() * inStock);
+  }
+  loadItemStore() {
+    const isShow = 2;
+    let isStoreEmpty = true;
+    storeList.innerHTML = this.itemStore
+      .map((item) => {
+        const checkGoods = this.getOutOfStock();
+        const cost = this.getCost();
+        if (checkGoods === isShow) isStoreEmpty = false;
+
+        return `<div class="store__list-item ${item.name} ${
+          checkGoods < isShow ? "hidden-item" : ""
+        }">
+          <span class="store__list-item-price">
+            $${cost}
+          </span>
+      </div>`;
+      })
+      .join("");
+
+    if (isStoreEmpty) {
+      const randomItemIndex = Math.floor(Math.random() * this.itemStore.length);
+      const itemRandom = this.itemStore[randomItemIndex];
+      const itemRandomCost = this.getCost();
+      storeList.innerHTML = this.itemStore
+        .map((item, index) => {
+          return `<div class="store__list-item ${
+            index === randomItemIndex ? `${itemRandom.name}` : ""
+          }  ${index !== randomItemIndex ? `hidden-item` : ""}">
+        <span class="store__list-item-price">
+          ${index === randomItemIndex ? `$${itemRandomCost}` : ""}
+        </span>
+        </div>`;
+        })
+        .join("");
+    }
+  }
+  setTnt() {
+    this.TNT = this.TNT < 5 ? ++this.TNT : this.TNT;
+  }
+  setEnegry() {
+    this.isEnegryDrink = true;
+  }
+  setClover() {
+    this.isClover = true;
+  }
+  setStoneBook() {
+    this.isStoneBook = true;
+  }
+  setPolish() {
+    this.isPolishWater = true;
+  }
+  resetStore() {
+    this.isEnegryDrink = false;
+    this.isClover = false;
+    this.isStoneBook = false;
+    this.isPolishWater = false;
+  }
+  loadTnt() {
     let html = ``;
     for (let i = 1; i <= this.TNT; i++) {
       html += `<span class="gunpowder"></span>`;
@@ -165,81 +736,97 @@ class GoldMiner {
     itemContainer.innerHTML = html;
   }
   getMysteryBag(item) {
-    if (item === "isEngryDrink") {
-      this.isEngryDrink = true;
+    if (item === "isEnegryDrink") {
+      this.isEnegryDrink = true;
     } else {
-      this.TNT = this.TNT <= 5 ? ++this.TNT : this.TNT;
+      this.setTnt();
     }
   }
-  mysteryBagValue = [
-    Math.floor(Math.random() * (800 - 11) + 1) + 11,
-    // () => this.getMysteryBag("isEngryDrink"),
-    // () => this.getMysteryBag("TNT"),
-  ];
-  Items = [
-    {
-      id: "r-stone",
-      img: "gapda_2",
-      size: "small",
-      time: 3000,
-      bonus: this.roundStone,
-    },
-    {
-      id: "t-stone",
-      img: "gapda_1",
-      size: "small-medium",
-      time: 3000,
-      bonus: this.triagleStone,
-    },
-    {
-      id: "l-gold",
-      img: "gapvang_1",
-      size: "large",
-      time: 5000,
-      bonus: this.largeGold,
-    },
-    {
-      id: "m-gold",
-      img: "gapvang_2",
-      size: "medium",
-      time: 4000,
-      bonus: this.mediumGold,
-    },
-    {
-      id: "sm-gold",
-      img: "gapvang_3",
-      size: "small-medium",
-      time: 1500,
-      bonus: this.smallMediumGold,
-    },
-    {
-      id: "s-gold",
-      img: "gapvang_3",
-      size: "small",
-      time: 1000,
-      bonus: this.smallGold,
-    },
-    {
-      id: "mystery-bag",
-      img: "gapMysteryBag",
-      size: "small",
-      time: 1000,
-      bonus: this.mysteryBagValue[0],
-      // Math.floor(
-      //   Math.random() * (this.mysteryBagValue.length - 1 - 0) + 1
-      // ) + 0
-    },
-  ];
-  constructor() {}
   setDrop(isDrop) {
     this.isDrop = isDrop;
   }
   setPullTime(time) {
-    this.pullTime = time;
+    this.pullTime = this.isEnegryDrink ? time / 2 : time;
+  }
+  getRandomMysteryItem() {
+    return (
+      Math.floor(Math.random() * maxMysteryBag - minMysteryBag + 1) +
+      minMysteryBag
+    );
+  }
+  setMoney(itemMoney = 0) {
+    this.money += itemMoney;
+    moneyContainer.textContent = `$${this.money}`;
   }
   plusMoney(findItem) {
-    this.money += findItem.bonus;
-    moneyContainer.textContent = `$${this.money}`;
+    const rStoneIndex = 0;
+    const tStoneIndex = 1;
+    const diamondIndex = 7;
+
+    const moneyIndex = 1;
+    const enegryIndex = 2;
+    let itemMoney = 0;
+    // Get mystery bag
+    if (findItem.id === "mystery-bag") {
+      let mysteryBagResult = this.getRandomMysteryItem();
+      let maxCount = 3;
+      let count = 1;
+
+      // If have clover
+      do {
+        mysteryBagResult = this.getRandomMysteryItem();
+        count++;
+      } while (
+        this.isClover &&
+        mysteryBagResult === moneyIndex &&
+        maxCount < 3
+      );
+      // End
+
+      if (mysteryBagResult === moneyIndex) {
+        this.currentMoney = this.mysteryBagValue.getMoney();
+        this.money += this.currentMoney;
+        moneyContainer.textContent = `$${this.money}`;
+        return;
+      } else if (mysteryBagResult === enegryIndex) {
+        this.mysteryBagValue.getEnegryDrink();
+        strengthNotify.classList.add("active");
+        player.src = "./src/public/images/streng1.png";
+
+        setTimeout(() => {
+          player.src = this.playerSrc;
+          strengthNotify.classList.remove("active");
+        }, 500);
+        return;
+      } else {
+        this.mysteryBagValue.getTnt();
+        this.loadTnt();
+        console.log("TNT");
+        return;
+      }
+    }
+
+    // Use stone book
+    if (
+      findItem.id === this.Items[rStoneIndex].id ||
+      findItem.id === this.Items[tStoneIndex].id
+    ) {
+      itemMoney = this.isStoneBook ? findItem.bonus * 3 : findItem.bonus;
+      this.setMoney(itemMoney);
+      return;
+    }
+    // End
+    // Use polish
+    if (findItem.id === this.Items[diamondIndex].id) {
+      const polishBonus = findItem.bonus * 0.5;
+      itemMoney = this.isPolishWater
+        ? findItem.bonus + polishBonus
+        : findItem.bonus;
+      this.setMoney(itemMoney);
+      return;
+    }
+    // End
+    return (itemMoney = itemMoney === 0 ? findItem.bonus : itemMoney);
   }
   getRandomPosition() {
     // const marginBottom = 100;
@@ -283,17 +870,44 @@ class GoldMiner {
     let html = ``;
     const round = roundGame[this.level];
     round.forEach((item) => {
+      if (item.id === undefined) return;
       html += `
       <div
-      class="item ${item.class}"
+      class="item absolute ${item.class} ${
+        item.class === "gold-1" ? "g-p-4 " : ""
+      } ${item.id === "pig" && item?.itemScaleX ? "overturned" : ""}"
       data-id="${item.id}"
-      style="position: absolute; top: ${item.top}px; left: ${
-        item.bottom
-      }px;padding:${item.class === "gold-1" ? 10 : 0}px">
+      style="top: ${item.top}%; left: ${item.left}%;">
       </div>
       `;
     });
+
     mapMiner.innerHTML = html;
+
+    const pigs = $$(".pig");
+    if (pigs) {
+      const mapWidth = mapMiner.getBoundingClientRect();
+      const endMapWidth = mapWidth.width;
+      for (const pig of pigs) {
+        pig.animate(
+          [
+            {
+              left: `0px`,
+            },
+            {
+              left: `${endMapWidth}px`,
+            },
+            {
+              left: `0px`,
+            },
+          ],
+          {
+            duration: 10000,
+            iterations: Infinity,
+          }
+        );
+      }
+    }
   }
   removeSecondClass(element) {
     const secondIndex = 1;
@@ -306,7 +920,49 @@ class GoldMiner {
     return element.classList[secondIndex];
   }
   openStore() {
+    const tntIndex = 0;
+    const enegryIndex = 1;
+    const cloverIndex = 2;
+    const stoneBookIndex = 3;
+
+    this.resetStore();
+    clearInterval(this.stopTime);
+    this.loadItemStore();
     this.removeSecondClass(trader);
+    // When hover item
+    const storeItems = $$(".store__list-item");
+    for (const item of storeItems) {
+      item.addEventListener("mouseover", () => {
+        // item contains class is name example: tnt,clover...
+        const getInfo = this.getItemByName(item);
+        itemStoreInfo.textContent = getInfo.desc;
+      });
+    }
+    // End
+    // Buy items
+    for (const item of storeItems) {
+      item.addEventListener("click", () => {
+        if (!this.isBuy) {
+          this.isBuy = true;
+        }
+        // item contains class is name example: tnt,clover...
+        const getInfo = this.getItemByName(item);
+        if (getInfo.name === this.itemStore[tntIndex].name) {
+          this.setTnt();
+          this.loadTnt();
+        } else if (getInfo.name === this.itemStore[enegryIndex].name) {
+          this.setEnegry();
+        } else if (getInfo.name === this.itemStore[cloverIndex].name) {
+          this.setClover();
+        } else if (getInfo.name === this.itemStore[stoneBookIndex].name) {
+          this.setStoneBook();
+        } else {
+          this.setPolish();
+        }
+        item.remove();
+      });
+    }
+    // End
     store.style.display = "block";
     store.style.opacity = 1;
   }
@@ -326,6 +982,7 @@ class GoldMiner {
       this.removeSecondClass(trader);
       trader.classList.add("happy");
     }
+    this.isNextRound = true;
     setTimeout(() => {
       // store.style.opacity = 0;
       store.style.display = "none";
@@ -367,28 +1024,37 @@ class GoldMiner {
   loadLevel() {
     levelNumber.textContent = this.level;
   }
+  handleCountDown() {
+    if (this.stopTime !== 0) {
+      clearInterval(this.stopTime);
+    }
+    let time = 60;
+    this.stopTime = setInterval(() => {
+      time--;
+      timeSet.textContent = `${time}`;
+      if (time === 0) {
+        if (this.money >= this.target) {
+          this.winGame();
+        } else {
+          this.loseGame();
+        }
+        this.stopAnimation();
+        clearInterval(this.stopTime);
+        this.stopTime = 0;
+      }
+    }, 1000);
+  }
   restartGame() {
     this.level = 1;
     this.target = 650;
     this.TNT = 0;
     this.isBuy = false;
     this.isClover = false;
-    this.isEngryDrink = false;
+    this.isEnegryDrink = false;
     this.isPolishWater = false;
     this.isStoneBook = false;
-  }
-  loadGame() {
-    moneyContainer.textContent = `$${this.money}`;
-    // Hàm sử lý sự kiện
-    // this.handleEvent();
-    // Generate items
-    this.generateItems();
-    // Load auxiliary items
-    this.loadGunPowder();
-    // Load level
-    this.loadLevel();
-    // Load target money
-    targetNumber.textContent = `$${this.target.toFixed()}`;
+    // reset  background Map
+    this.removeSecondClass(mapMiner);
   }
   showMenu() {
     startGame.style.display = "block";
@@ -412,15 +1078,23 @@ class GoldMiner {
     if (isNewRound) {
       statusAudio.addEventListener("ended", () => {
         audio.play();
+        this.isNextRound = true;
       });
     } else {
-      audio.play();
+      if (isWin || isNewRound) {
+        audio.play();
+      }
+      this.isNextRound = false;
     }
     this.setMessageTarget(message, target);
     this.activePassLevel(true);
   }
+
   closeShowPassLevel() {
     this.activePassLevel(false);
+    if (this.isNextRound) {
+      this.handleCountDown();
+    }
   }
   winGame() {
     this.level++;
@@ -435,14 +1109,30 @@ class GoldMiner {
   }
   loseGame() {
     this.restartGame();
-    this.showPassLevel("Bạn đã không hoàn thành nhiệm vụ", "", false);
+    this.showPassLevel("Bạn đã không hoàn thành nhiệm vụ", "", false, false);
     setTimeout(() => {
       this.closeShowPassLevel();
       this.setMessageTarget("Mục tiêu của bạn là", `$${this.target}`);
       this.showMenu();
       this.activePassLevel(true);
-      this.menu();
+      // this.menu();
     }, 2000);
+  }
+  stopAnimation() {
+    // this.shoot.pause();
+    // this.shootEnd.pause();
+    // if (this.shootCancel) {
+    //   this.shootCancel.pause();
+    // }
+    clearTimeout(this.pullItemFinish);
+    clearTimeout(this.plusMoneyTimeOut);
+    audio.pause();
+    boomAudio.pause();
+    statusAudio.pause();
+    clearInterval(this.pullUp);
+    if (this.shootEnd) {
+      this.shootEnd.removeEventListener("finish", this.handleFinishPull);
+    }
   }
   handleEvent() {
     const wireLength = hookWire.offsetHeight;
@@ -451,10 +1141,8 @@ class GoldMiner {
     const diagonalLength = Math.sqrt(
       Math.pow(map.offsetWidth, 2) + Math.pow(map.offsetHeight, 2)
     );
-    // console.log(handleHook.getBoundingClientRect(), "Hook");
-    // console.log(item.getBoundingClientRect(), "Item");
 
-    const shaking = [
+    const shake = [
       {
         transform: "rotate(60deg)",
       },
@@ -476,23 +1164,32 @@ class GoldMiner {
         height: `${wireLength}px`,
       },
     ];
-    const hook = hookWire.animate(shaking, {
+    this.hook = hookWire.animate(shake, {
       duration: 3800,
       iterations: Infinity,
     });
 
-    // console.log([hookWire]);
     document.addEventListener("keyup", (e) => {
       if (e.key === "ArrowUp" && this.TNT >= 1 && this.isPullUp === true) {
-        handleHook.src = "./src/public/images/moc_out.png";
-        boomAudio.play();
-        this.TNT--;
+        console.log("Boom");
+        let count = 1;
         const firstChild = 0;
         const modifyIndex = 1;
+        const destroyAnimation = setInterval(() => {
+          count = count === 4 ? (count = 1) : count;
+          player.src = `./src/public/images/minerTnt${count}.png`;
+          count++;
+        }, 100);
+
+        handleHook.src = "./src/public/images/moc_out.png";
+
+        boomAudio.play();
+        this.TNT--;
+
         const modifyElement =
           hookWire.children[firstChild].classList[modifyIndex];
 
-        hookWire.children[0].classList.remove(modifyElement);
+        hookWire.children[firstChild].classList.remove(modifyElement);
 
         hookWire.animate([{ height: `${wireLength}px` }], {
           duration: 0,
@@ -504,20 +1201,24 @@ class GoldMiner {
         this.isPull = false;
         this.isPullUp = false;
         this.setDrop(false);
-        this.loadGunPowder();
+        this.loadTnt();
         setTimeout(() => {
-          hook.play();
-        }, 100);
+          this.hook.play();
+          clearInterval(destroyAnimation);
+          player.src = this.playerSrc;
+        }, 200);
         clearInterval(this.dropHook);
         clearInterval(this.pullUp);
         return;
-        // return để tránh code chạy xuống dưới do setDrop đã được set thành false
+        // return to avoid code from running below due to setDrop being set to false
       }
-
+      if(!this.isDrop) {
+        this.hook.play();
+      }
       if (this.isDrop) return;
 
       if (e.key === "ArrowDown") {
-        hook.pause();
+        this.hook.pause();
         this.setDrop(true);
         this.shoot = hookWire.animate(shootOut, {
           duration: 2000,
@@ -528,15 +1229,14 @@ class GoldMiner {
           const hookLocation = handleHook.getBoundingClientRect();
 
           const background = map.getBoundingClientRect();
-          const backgroundBottom = 560;
           if (
             hookLocation.left <= background.left ||
-            hookLocation.bottom >= backgroundBottom ||
+            hookLocation.top >= background.bottom ||
             hookLocation.right >= background.right
           ) {
             this.shoot.pause();
-            hook.pause();
-            const shootCancel = hookWire.animate(
+            this.hook.pause();
+            this.shootCancel = hookWire.animate(
               [{ height: `${wireLength}px` }],
               {
                 duration: 1000,
@@ -545,22 +1245,21 @@ class GoldMiner {
               }
             );
 
-            shootCancel.addEventListener("finish", () => {
+            this.shootCancel.addEventListener("finish", () => {
               this.setDrop(false);
-              hook.play();
+              this.hook.play();
             });
             clearInterval(this.dropHook);
             return;
           }
-          // Kiểm tra xem hook có chạm vao item nào không
+          // Check to see if the hook touches any items
           const [iscollide, id, item] = this.handlePullItem();
           if (iscollide) {
             const findItem = this.Items.find((item) => item.id === id);
             this.isPullUp = true;
-            this.pullTime = 4000;
-
             handleHook.src = `./src/public/images/${findItem.img}.png`;
             handleHook.classList.add(`${findItem.size}`);
+
             let promise;
             if (findItem.id === "l-gold") {
               promise = this.checkStatus("cool");
@@ -583,7 +1282,6 @@ class GoldMiner {
 
             // Set pull time
             this.setPullTime(findItem.time);
-
             handleHook.addEventListener("load", () => {
               item.remove();
             });
@@ -595,31 +1293,42 @@ class GoldMiner {
               fill: "forwards",
             });
 
-            // Xử lý event sau khi kéo dây móc lên
-            this.shootEnd.addEventListener("finish", () => {
+            this.handleFinishPull = () => {
               handleHook.src = "./src/public/images/moc_out.png";
               this.shoot.pause();
               clearInterval(this.pullUp);
+              const moneyResult = this.plusMoney(findItem);
 
-              setTimeout(() => {
+              if (findItem.id !== "mystery-bag") {
+                bonus.textContent = `$${findItem.bonus}`;
+              } else {
+                bonus.textContent =
+                  this.currentMoney > 0 ? `$${this.currentMoney}` : "";
+                this.currentMoney = 0;
+              }
+              this.pullItemFinish = setTimeout(() => {
                 audio.pause();
                 audio.src = "./src/public/sounds/upfinish.mp3";
                 audio.play();
               }, 200);
-              this.plusMoney(findItem);
-              bonus.textContent = `$${findItem.bonus}`;
+
               bonus.classList.add("active");
+
+              this.shootEnd.pause();
               setTimeout(() => {
-                hook.play();
+                this.hook.play();
                 this.setDrop(false);
                 this.isPull = false;
               }, 200);
-              setTimeout(() => {
+              this.plusMoneyTimeOut = setTimeout(() => {
+                this.setMoney(moneyResult);
                 bonus.classList.remove("active");
               }, 1000);
               handleHook.classList.remove(`${findItem.size}`);
               clearInterval(this.dropHook);
-            });
+            };
+            // Xử lý event sau khi kéo dây móc lên
+            this.shootEnd.addEventListener("finish", this.handleFinishPull);
           }
         }, 100);
 
@@ -638,60 +1347,83 @@ class GoldMiner {
     app.addEventListener("mouseup", (e) => {});
     // End
 
-    // Buy items
-    for (const item of storeItems) {
-      item.addEventListener("click", () => {
-        if (!this.isBuy) {
-          this.isBuy = true;
-        }
-        const typeItem = this.getSecondClassName(item);
-        item.remove();
-      });
-    }
-    // End
     // Next game
     nextGamebtn.addEventListener("click", (e) => {
       e.preventDefault();
+      this.showPassLevel(
+        "Mục tiêu của bạn là",
+        `$${this.target.toFixed()}`,
+        false,
+        true
+      );
       this.loadGame();
-      this.showPassLevel("Mục tiêu của bạn là", `$${this.target.toFixed()}`, false, true);
       this.closeStore();
-      audio.addEventListener("ended", () => {
+      setTimeout(() => {
         this.closeShowPassLevel();
-      });
+      }, 2000);
     });
     // End
+  }
+  loadGame() {
+    // can drop hook
+    this.setDrop(false);
+    // Enđ
 
-    const handleCountDown = () => {
-      let time = 59;
-      let stopTime = setInterval(() => {
-        timeSet.textContent = `${time}`;
-        time--;
-      }, 1000);
-      if (time === 0) {
-        if (this.money >= this.target) {
-          this.winGame();
-        } else {
-          this.loseGame();
-        }
-        clearInterval(stopTime);
+    // no item is pull
+    this.isPull = false;
+    // Enđ
+
+    // Sake hook
+    if (this.hook) {
+      this.hook.play();
+    }
+    // Enđ
+
+    // set hook image
+    this.removeSecondClass(handleHook);
+    handleHook.src = this.hookSrc;
+    // Enđ
+
+    moneyContainer.textContent = `$${this.money}`;
+    // Generate items
+    this.generateItems();
+    // Load auxiliary items
+    this.loadTnt();
+    // Load level
+    this.loadLevel();
+    // Load target money
+    targetNumber.textContent = `$${this.target.toFixed()}`;
+
+    // set UI time
+    timeSet.textContent = 60;
+
+    // Load map
+    this.removeSecondClass(mapMiner);
+    for (const item of roundGame[this.level]) {
+      if (item?.map) {
+        mapMiner.classList.add(`${item.map}`);
       }
-    };
-    handleCountDown();
+    }
   }
   menu() {
     playGame.addEventListener("click", () => {
       startGame.style.opacity = "0";
       audio.src = "./src/public/sounds/goal.mp3";
-      audio.play();
+      audio.addEventListener("canplaythrough", () => {
+        audio.play();
+      });
       setTimeout(() => {
         startGame.style.display = "none";
 
-        this.handleEvent();
         this.loadGame();
         this.closeShowPassLevel();
+        this.handleCountDown();
       }, 2000);
 
       exitBtn.addEventListener("click", () => {
+        this.stopAnimation();
+        clearInterval(this.stopTime);
+        clearInterval(this.dropHook);
         if (this.money >= this.target) {
           this.winGame();
         } else {
@@ -702,8 +1434,12 @@ class GoldMiner {
   }
   start() {
     document.addEventListener("DOMContentLoaded", () => {
+      // Hàm sử lý sự kiện
+      this.handleEvent();
       // Start game
       this.menu();
+      // Set this
+      _This = this;
     });
   }
 }

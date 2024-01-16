@@ -9,18 +9,21 @@ html {
   font-weight: 500;
   background-color: #834e2e;
 }
-#app {
+/* #app {
+} */
+.container {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
   max-width: 800px;
   margin: 0 auto;
-  border: 1px solid #000;
-  background-color: #f4ce14;
 }
-#container {
-  position: relative;
+.absolute {
+  position: absolute;
+}
+.overturned {
+  transform: scaleX(-1);
 }
 /* .player {
 } */
@@ -37,10 +40,13 @@ html {
   top: 8px;
   left: 50%;
   width: 70px;
-  height: auto;
+  height: 70px;
   object-fit: contain;
   z-index: 2;
   transform: translateX(-50%);
+}
+.player__img.player__padding {
+  top: 3px;
 }
 /* .background {
   margin-top: 70px;
@@ -51,6 +57,7 @@ html {
   justify-content: space-between;
   align-items: center;
   height: 72px;
+  background-color: #f4ce14;
 }
 .header__stength {
   position: absolute;
@@ -62,16 +69,17 @@ html {
   z-index: 3;
   opacity: 0;
   text-shadow: 1px 1px #000;
-  transition: opacity 0.2s linear;
+  transition: opacity 1s linear;
+}
+.header__stength.active {
+  opacity: 1;
 }
 .header__number {
   color: #008000;
 }
-/* .header__target-title {
-} */
 
 .header__target-number {
-  color: #ff0000;
+  color: #ff6c22;
   font-size: 18px;
 }
 @keyframes pushLeft {
@@ -82,42 +90,10 @@ html {
     transform: translate(10px, 0);
     transform: translate(-14px, 0);
     transform: translate(-146px, -6px);
+  }
+  to{
     opacity: 0;
   }
-  /* 0% {
-    top: 25%;
-  }
-  25% {
-    top: 18%;
-  }
-  45% {
-    top: 14%;
-  }
-  50% {
-    top: 14%;
-    left: 140px;
-  }
-  60% {
-    top: 14%;
-    left: 120px;
-  }
-  70% {
-    top: 14%;
-    left: 100px;
-  }
-  80% {
-    top: 14%;
-    left: 80px;
-  }
-  90% {
-    top: 14%;
-    left: 60px;
-  }
-  100% {
-    top: 14%;
-    left: 40px;
-    opacity: 0;
-  } */
 }
 .header__bonus {
   position: absolute;
@@ -140,7 +116,21 @@ html {
 .header__right {
   display: flex;
   gap: 32px;
+  margin-right: 12px;
 }
+.header__time-number {
+  font-size: 20px;
+  margin-left: 2px;
+  font-weight: 500;
+  color: #ff0000;
+}
+.header__level-number {
+  font-size: 20px;
+  margin-left: 12px;
+  font-weight: 500;
+  color: #11c211;
+}
+
 .header__exit {
   position: relative;
   display: inline-block;
@@ -150,6 +140,8 @@ html {
   border: 1px solid #495e57;
   outline: none;
   border-radius: 6px;
+  min-height: 30px;
+  height: 30px;
   z-index: 2;
 }
 .header__exit:active {
@@ -171,30 +163,67 @@ html {
 }
 .hook {
   position: absolute;
-  top: 100%;
-  right: -38.3px;
+  top: calc(100% - 8px);
+  right: -38px;
   transform: rotate(2.6deg);
   width: 80px;
 }
-.hook.small {
-  top: 100%;
+@keyframes identifier {
+  from {
+    height: 20px;
+  }
+  to {
+    height: 500px;
+  }
+}
+.hook.r-stone {
+  top: calc(100% - 3px);
+  right: -14px;
+  width: 34px;
+}
+.hook.t-stone {
+  top: calc(100% - 3px);
+  right: -24px;
+  width: 60px;
+}
+.hook.s-gold {
+  top: calc(100% - 1px);
   right: -23px;
   width: 50px;
 }
-.hook.small-medium {
-  top: 100%;
-  right: -33px;
-  width: 70px;
+.hook.sm-gold {
+  top: calc(100% - 1px);
+  right: -38.6px;
+  width: 80px;
 }
-.hook.medium {
-  top: 100%;
+.hook.m-gold {
+  top: calc(100% - 3px);
   right: -36px;
   width: 70px;
 }
-.hook.large {
-  top: 100%;
-  right: -40px;
+.hook.l-gold {
+  top: calc(100% - 2px);
+  right: -38.6px;
   width: 80px;
+}
+.hook.m-bag {
+  top: calc(100% - 12px);
+  right: -14px;
+  width: 40px;
+}
+.hook.dia {
+  top: calc(100% - 1px);
+  right: -11px;
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+.hook.p-pig {
+  top: calc(100% - 8px);
+  right: -17px;
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
 }
 .start-line {
   position: relative;
@@ -202,14 +231,27 @@ html {
   height: 2px;
   background-color: #000;
 }
+
 .background {
-  padding-top: 100%;
+  padding-top: 64%;
   position: relative;
-  background-image: url("../public/images/background_1_out.jpeg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top center;
 }
+.background.map-1 {
+  background-image: url("../public/images/background_1_out.jpeg");
+}
+.background.map-2 {
+  background-image: url("../public/images/background_2_out.jpg");
+}
+.background.map-3 {
+  background-image: url("../public/images/background_3_out.jpg");
+}
+.background.map-4 {
+  background-image: url("../public/images/background_4_out.jpg");
+}
+
 .item {
   position: absolute;
   top: 30%;
@@ -222,6 +264,9 @@ html {
   width: 50px;
   height: 50px;
   background-size: contain;
+}
+.g-p-4 {
+  padding: 4px;
 }
 .stone-2 {
   background-repeat: no-repeat;
@@ -240,8 +285,8 @@ html {
 .gold-3 {
   background-repeat: no-repeat;
   background-image: url("../public/images/vang_2.png");
-  width: 70px;
-  height: 70px;
+  width: 64px;
+  height: 64px;
   background-size: contain;
 }
 .gold-2 {
@@ -263,6 +308,20 @@ html {
   background-image: url("../public/images/mysteryBag.png");
   width: 46px;
   height: 46px;
+  background-size: contain;
+}
+.diamond {
+  background-image: url("../public/images/diamond.png");
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 22px;
+  background-size: contain;
+}
+.pig {
+  background-image: url("../public/images/pig.png");
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
   background-size: contain;
 }
 /* End */
@@ -319,7 +378,7 @@ html {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
   100% {
     transform: scale(1);
@@ -336,7 +395,7 @@ html {
   opacity: 0.8;
   border-radius: 50rem;
   filter: blur(50px);
-  animation: zoomIn 2s linear infinite;
+  animation: zoomIn 4s linear infinite;
 }
 .play {
   position: absolute;
@@ -369,8 +428,9 @@ html {
   width: 100%;
   background-image: url("../public/images/show_target-removebg.png");
   background-repeat: no-repeat;
-  background-size: 75% 100%;
+  background-size: 900px 100%;
   background-position: top center;
+  object-fit: contain;
   z-index: 999;
   opacity: 1;
   transition: opacity 1s linear;
@@ -409,6 +469,7 @@ html {
   z-index: 999;
   background-image: url("../public/images/store_background.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
   opacity: 0;
   display: none;
   /* transition: opacity 1s linear; */
@@ -417,9 +478,6 @@ html {
   width: 800px;
   height: auto;
   margin: 0 auto;
-}
-.hidden-item {
-  pointer-events: none;
 }
 .title {
   display: flex;
@@ -463,7 +521,7 @@ html {
   position: relative;
   bottom: 22px;
   width: 70px;
-  height:70px;
+  height: 70px;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -479,14 +537,23 @@ html {
 .store__list-item.tnt {
   background-image: url("../public/images/mine_out.png");
 }
+.store__list-item.enegry {
+  background-image: url("../public/images/bottle_out.png");
+}
 .store__list-item.clover {
   background-image: url("../public/images/clover_out.png");
+}
+.store__list-item.stone-book {
+  background-image: url("../public/images/book_out.png");
+}
+.store__list-item.polish {
+  background-image: url("../public/images/polish_out.png");
 }
 .store__list-item-price {
   position: absolute;
   top: calc(100% + 20px);
   left: 0;
-  color: #0C9B06;
+  color: #0c9b06;
   font-size: 1.7rem;
   user-select: none;
 }
@@ -498,10 +565,10 @@ html {
   background-size: contain;
   background-position: top center;
 }
-.trader.happy{
+.trader.happy {
   background-image: url("../public/images/traderSmile-removebg.png");
 }
-.trader.unhappy{
+.trader.unhappy {
   background-image: url("../public/images/traderAngry-removebg.png");
 }
 .trader__chat {
@@ -521,6 +588,7 @@ html {
   left: 0;
   text-align: center;
   font-size: 2rem;
+  user-select: none;
 }
 .store__table {
   width: 100%;
@@ -529,4 +597,26 @@ html {
   background-size: 100%;
   background-position: top center;
   background-repeat: no-repeat;
+}
+/* .visibility-item {
+} */
+.hidden-item {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.store__table-info {
+  position: absolute;
+  bottom: 74px;
+  left: 50%;
+  font-size: 20px;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #ffff00;
+}
+.myElement {
+  top: 0;
+  left: 0;
+  position: absolute;
+  cursor: move;
 }
