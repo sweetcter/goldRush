@@ -1,439 +1,135 @@
 // import Items from "./src/js/Items";
 // import roundGame from "./src/js/RoundGame";
 "use strict";
-const roundGame = [
-  [],
-  [
-    {
-      id: "r-stone",
-      top: 27,
-      left: 74,
-      class: "stone-2",
-    },
-    {
-      id: "r-stone",
-      top: 25,
-      left: 20,
-      class: "stone-2",
-    },
-    {
-      id: "t-stone",
-      top: 56,
-      left: 61,
-      class: "stone-1",
-    },
-    {
-      id: "t-stone",
-      top: 76,
-      left: 47,
-      class: "stone-1",
-    },
-    {
-      id: "l-gold",
-      top: 52,
-      left: 19,
-      class: "gold-4",
-    },
-    {
-      id: "l-gold",
-      top: 65,
-      left: 53,
-      class: "gold-4",
-    },
-    {
-      id: "sm-gold",
-      top: 30,
-      left: 58,
-      class: "gold-2",
-    },
-    {
-      id: "sm-gold",
-      top: 72,
-      left: 86,
-      class: "gold-2",
-    },
-    {
-      id: "sm-gold",
-      top: 82,
-      left: 20,
-      class: "gold-2",
-    },
-    {
-      id: "mystery-bag",
-      top: 25,
-      left: 13,
-      class: "mystery-bag",
-    },
-    {
-      id: "mystery-bag",
-      top: 39,
-      left: 70,
-      class: "mystery-bag",
-    },
-    {
-      id: "s-gold",
-      top: 34,
-      left: 74,
-      class: "gold-1",
-    },
-    {
-      id: "s-gold",
-      top: 36,
-      left: 66,
-      class: "gold-1",
-    },
-    {
-      id: "s-gold",
-      top: 38,
-      left: 25,
-      class: "gold-1",
-    },
-    {
-      id: "s-gold",
-      top: 51,
-      left: 32,
-      class: "gold-1",
-    },
-    {
-      map: "map-1",
-    },
-  ],
-  [
-    {
-      id: "sm-gold",
-      top: 75,
-      left: 79,
-      class: "gold-2",
-    },
-    {
-      id: "sm-gold",
-      top: 57,
-      left: 64,
-      class: "gold-2",
-    },
-    {
-      id: "sm-gold",
-      top: 34,
-      left: 7,
-      class: "gold-2",
-    },
-    {
-      id: "s-gold",
-      top: 25,
-      left: 73,
-      class: "gold-1",
-    },
-    {
-      id: "s-gold",
-      top: 44,
-      left: 78,
-      class: "gold-1",
-    },
-    {
-      id: "s-gold",
-      top: 27,
-      left: 59,
-      class: "gold-1",
-    },
-    {
-      id: "s-gold",
-      top: 39,
-      left: 61,
-      class: "gold-1",
-    },
-    {
-      id: "s-gold",
-      top: 53,
-      left: 33,
-      class: "gold-1",
-    },
-    {
-      id: "s-gold",
-      top: 36,
-      left: 13,
-      class: "gold-1",
-    },
-    {
-      id: "l-gold",
-      top: 78,
-      left: 27,
-      class: "gold-4",
-    },
-    {
-      id: "l-gold",
-      top: 72,
-      left: 9,
-      class: "gold-4",
-    },
-    {
-      id: "r-stone",
-      top: 66,
-      left: 20,
-      class: "stone-2",
-    },
-    {
-      id: "r-stone",
-      top: 64,
-      left: 37,
-      class: "stone-2",
-    },
-    {
-      id: "r-stone",
-      top: 28,
-      left: 64,
-      class: "stone-2",
-    },
-    {
-      id: "t-stone",
-      top: 38,
-      left: 15,
-      class: "stone-1",
-    },
-    {
-      id: "t-stone",
-      top: 58,
-      left: 7,
-      class: "stone-1",
-    },
-    {
-      id: "t-stone",
-      top: 56,
-      left: 26,
-      class: "stone-1",
-    },
-    {
-      id: "t-stone",
-      top: 68,
-      left: 52,
-      class: "stone-1",
-    },
-    {
-      map: "map-2",
-    },
-  ],
-  [
-    {
-      id: "l-gold",
-      top: 63,
-      left: 1,
-      class: "gold-4",
-    },
-    {
-      id: "s-gold",
-      top: 24,
-      left: 24,
-      class: "gold-1",
-    },
-    {
-      id: "s-gold",
-      top: 22,
-      left: 18,
-      class: "gold-1",
-    },
-    {
-      id: "s-gold",
-      top: 30,
-      left: 18,
-      class: "gold-1",
-    },
-    {
-      id: "s-gold",
-      top: 41,
-      left: 61,
-      class: "gold-1",
-    },
-    {
-      id: "sm-gold",
-      top: 49,
-      left: 15,
-      class: "gold-2",
-    },
-    {
-      id: "sm-gold",
-      top: 55,
-      left: 68,
-      class: "gold-2",
-    },
-    {
-      id: "s-gold",
-      top: 41,
-      left: 81,
-      class: "gold-2",
-    },
-    {
-      id: "r-stone",
-      top: 67,
-      left: 66,
-      class: "stone-2",
-    },
-    {
-      id: "r-stone",
-      top: 48,
-      left: 46,
-      class: "stone-2",
-    },
-    {
-      id: "r-stone",
-      top: 41,
-      left: 39,
-      class: "stone-2",
-    },
-    {
-      id: "t-stone",
-      top: 56,
-      left: 75,
-      class: "stone-1",
-    },
-    {
-      id: "t-stone",
-      top: 45,
-      left: 74,
-      class: "stone-1",
-    },
-    {
-      id: "t-stone",
-      top: 55,
-      left: 59,
-      class: "stone-1",
-    },
-    {
-      id: "t-stone",
-      top: 58,
-      left: 21,
-      class: "stone-1",
-    },
-    {
-      id: "diamond",
-      top: 66,
-      left: 72,
-      class: "diamond",
-    },
-    {
-      id: "mystery-bag",
-      top: 51,
-      left: 53,
-      class: "mystery-bag",
-    },
-
-    {
-      map: "map-2",
-    },
-  ],
-  [
-    {
-      id: "mystery-bag",
-      top: 68,
-      left: 44,
-      class: "mystery-bag",
-    },
-    {
-      id: "mystery-bag",
-      top: 49,
-      left: 26,
-      class: "mystery-bag",
-    },
-    {
-      id: "mystery-bag",
-      top: 40,
-      left: 73,
-      class: "mystery-bag",
-    },
-    {
-      id: "mystery-bag",
-      top: 53,
-      left: 65,
-      class: "mystery-bag",
-    },
-    {
-      id: "m-gold",
-      top: 71,
-      left: 54,
-      class: "gold-3",
-    },
-    {
-      id: "m-gold",
-      top: 67,
-      left: 30,
-      class: "gold-3",
-    },
-    {
-      id: "t-stone",
-      top: 76,
-      left: 21,
-      class: "stone-1",
-    },
-    {
-      id: "t-stone",
-      top: 34,
-      left: 78,
-      class: "stone-1",
-    },
-    {
-      id: "t-stone",
-      top: 32,
-      left: 24,
-      class: "stone-1",
-    },
-    {
-      id: "r-stone",
-      top: 56,
-      left: 58,
-      class: "stone-2",
-    },
-    {
-      id: "sm-gold",
-      top: 49,
-      left: 57,
-      class: "gold-2",
-    },
-    {
-      id: "s-gold",
-      top: 27,
-      left: 22,
-      class: "gold-1",
-    },
-    {
-      id: "s-gold",
-      top: 39,
-      left: 68,
-      class: "gold-1",
-    },
-    {
-      id: "s-gold",
-      top: 33,
-      left: 66,
-      class: "gold-1",
-    },
-    {
-      id: "pig",
-      top: 60,
-      left: 60,
-      itemScaleX: true,
-      class: "pig",
-    },
-    {
-      id: "pig",
-      top: 56,
-      left: 68,
-      class: "pig",
-    },
-    {
-      id: "pig",
-      top: 44,
-      left: 27,
-      class: "pig",
-    },
-    {
-      map: "map-1",
-    },
-  ],
-  [],
-  [],
-  [],
+const maps = [
+  { id: "map-1", map: "map-1" },
+  { id: "map-2", map: "map-2" },
+  { id: "map-3", map: "map-3" },
+  { id: "map-3", map: "map-3" },
 ];
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 const app = $("#app");
+const container = $(".container");
+const html = ` <div class="container">
+<audio id="audio" src=""></audio>
+<audio id="boom" src="./src/public/sounds/boom.mp3"></audio>
+<audio id="status" src=""></audio>
+<header class="header">
+  <div class="header__left">
+    <div class="header__money">
+      <span class="header__money-title">Tiền:</span>
+      <span class="header__number">0</span>
+    </div>
+    <div class="header__target">
+      <span class="header__target-title">Mục tiêu:</span>
+      <span class="header__target-number">$650</span>
+    </div>
+  </div>
+  <div class="player">
+    <img
+      src="./src/public/images/background_out.png"
+      alt=""
+      class="player__bg"
+    />
+    <img
+      src="./src/public/images/player_out.png"
+      alt=""
+      class="player__img"
+    />
+    <div class="items"></div>
+  </div>
+
+  <div class="header__right">
+    <button class="header__exit">Exit</button>
+    <div class="header__right-wrapper">
+      <div class="header__time">
+        <span class="header__time-title">Thời Gian:</span>
+        <span class="header__time-number">60</span>
+      </div>
+      <div class="header__level">
+        <span class="header__level-title">Cấp Độ:</span>
+        <span class="header__level-number">1</span>
+      </div>
+    </div>
+  </div>
+  <div class="hook-wire">
+    <img src="./src/public/images/moc_out.png" alt="" class="hook" />
+  </div>
+  <span class="header__stength">STRENGTH</span>
+  <span class="header__bonus">$</span>
+</header>
+<div class="start-line"></div>
+<div class="map">
+  <div class="background">
+    <!-- <div class="myElement gold-1"></div>
+  <div class="myElement gold-1"></div>
+  <div class="myElement gold-1"></div>
+  <div class="myElement gold-1"></div>
+  
+  <div class="myElement stone-1"></div>
+  <div class="myElement stone-1"></div>
+  <div class="myElement stone-1"></div>
+  <div class="myElement stone-2"></div>
+  <div class="myElement gold-2"></div>
+  <div class="myElement gold-3"></div>
+  <div class="myElement gold-3"></div>
+  <div class="myElement mystery-bag"></div>
+  <div class="myElement mystery-bag"></div>
+  <div class="myElement mystery-bag"></div> -->
+    <!-- <div class="myElement mystery-bag"></div> -->
+    <div class="myElement pig"></div>
+    <div class="myElement pig"></div>
+    <div class="myElement pig"></div>
+    <!-- <div class="myElement diamond"></div> -->
+  </div>
+</div>
+<div class="start">
+  <div class="miner">
+    <div class="gold-blur"></div>
+    <div class="gold"></div>
+    <div class="play">Chơi</div>
+  </div>
+  <div class="guide"></div>
+</div>
+</div>
+<div class="show">
+<div class="show__target">
+  <h3 class="show__target-title">Mục tiêu của bạn là</h3>
+  <span class="show__target-number"> $650 </span>
+</div>
+</div>
+<div class="store">
+<div class="store__container">
+  <div class="title">
+    <div class="title__text"></div>
+    <div>
+      <a href="#" class="title__next-game">Chơi tiếp</a>
+    </div>
+  </div>
+  <div class="main">
+    <div class="store__list">
+      <div class="store__list-wrapper"></div>
+      <div class="trader">
+        <div class="trader__chat">
+          <p class="trader__chat-text">
+            Click vào vật phẩm mà bạn muốn mua. Click vào chơi tiếp khi
+            bạn đã sẵn sàng.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="store__table">
+      <p class="store__table-info"></p>
+    </div>
+  </div>
+</div>
+</div>`;
+const render = (item) => {
+  app.innerHTML = item;
+};
+// render(html);
+
 const hookWire = $(".hook-wire");
 const handleHook = $(".hook");
 const moneyContainer = $(".header__number");
@@ -463,7 +159,876 @@ const inStock = 3;
 const itemStoreInfo = $(".store__table-info");
 let _This;
 const player = $(".player__img");
+let roundGame = [];
+const maxMap = 800;
+document.addEventListener("DOMContentLoaded", () => {
+  roundGame = [
+    [],
+    [
+      {
+        id: "r-stone",
+        top: 27,
+        left: 74,
+        class: "stone-2",
+      },
+      {
+        id: "r-stone",
+        top: 25,
+        left: 20,
+        class: "stone-2",
+      },
+      {
+        id: "t-stone",
+        top: 56,
+        left: 61,
+        class: "stone-1",
+      },
+      {
+        id: "t-stone",
+        top: 76,
+        left: 47,
+        class: "stone-1",
+      },
+      {
+        id: "l-gold",
+        top: 52,
+        left: 19,
+        class: "gold-4",
+      },
+      {
+        id: "l-gold",
+        top: 65,
+        left: 53,
+        class: "gold-4",
+      },
+      {
+        id: "sm-gold",
+        top: 30,
+        left: 58,
+        class: "gold-2",
+      },
+      {
+        id: "sm-gold",
+        top: 72,
+        left: 86,
+        class: "gold-2",
+      },
+      {
+        id: "sm-gold",
+        top: 82,
+        left: 20,
+        class: "gold-2",
+      },
+      {
+        id: "mystery-bag",
+        top: 25,
+        left: 13,
+        class: "mystery-bag",
+      },
+      {
+        id: "mystery-bag",
+        top: 39,
+        left: 70,
+        class: "mystery-bag",
+      },
+      {
+        id: "s-gold",
+        top: 34,
+        left: 74,
+        class: "gold-1",
+      },
+      {
+        id: "s-gold",
+        top: 36,
+        left: 66,
+        class: "gold-1",
+      },
+      {
+        id: "s-gold",
+        top: 38,
+        left: 25,
+        class: "gold-1",
+      },
+      {
+        id: "s-gold",
+        top: 51,
+        left: 32,
+        class: "gold-1",
+      },
+      {
+        map: "map-1",
+      },
+    ],
+    [
+      {
+        id: "sm-gold",
+        top: 75,
+        left: 79,
+        class: "gold-2",
+      },
+      {
+        id: "sm-gold",
+        top: 57,
+        left: 64,
+        class: "gold-2",
+      },
+      {
+        id: "sm-gold",
+        top: 34,
+        left: 7,
+        class: "gold-2",
+      },
+      {
+        id: "s-gold",
+        top: 25,
+        left: 73,
+        class: "gold-1",
+      },
+      {
+        id: "s-gold",
+        top: 44,
+        left: 78,
+        class: "gold-1",
+      },
+      {
+        id: "s-gold",
+        top: 27,
+        left: 59,
+        class: "gold-1",
+      },
+      {
+        id: "s-gold",
+        top: 39,
+        left: 61,
+        class: "gold-1",
+      },
+      {
+        id: "s-gold",
+        top: 53,
+        left: 33,
+        class: "gold-1",
+      },
+      {
+        id: "s-gold",
+        top: 36,
+        left: 13,
+        class: "gold-1",
+      },
+      {
+        id: "l-gold",
+        top: 78,
+        left: 27,
+        class: "gold-4",
+      },
+      {
+        id: "l-gold",
+        top: 72,
+        left: 9,
+        class: "gold-4",
+      },
+      {
+        id: "r-stone",
+        top: 66,
+        left: 20,
+        class: "stone-2",
+      },
+      {
+        id: "r-stone",
+        top: 64,
+        left: 37,
+        class: "stone-2",
+      },
+      {
+        id: "r-stone",
+        top: 28,
+        left: 64,
+        class: "stone-2",
+      },
+      {
+        id: "t-stone",
+        top: 38,
+        left: 15,
+        class: "stone-1",
+      },
+      {
+        id: "t-stone",
+        top: 58,
+        left: 7,
+        class: "stone-1",
+      },
+      {
+        id: "t-stone",
+        top: 56,
+        left: 26,
+        class: "stone-1",
+      },
+      {
+        id: "t-stone",
+        top: 68,
+        left: 52,
+        class: "stone-1",
+      },
+      {
+        map: "map-2",
+      },
+    ],
+    [
+      {
+        id: "l-gold",
+        top: 63,
+        left: 1,
+        class: "gold-4",
+      },
+      {
+        id: "s-gold",
+        top: 24,
+        left: 24,
+        class: "gold-1",
+      },
+      {
+        id: "s-gold",
+        top: 22,
+        left: 18,
+        class: "gold-1",
+      },
+      {
+        id: "s-gold",
+        top: 30,
+        left: 18,
+        class: "gold-1",
+      },
+      {
+        id: "s-gold",
+        top: 41,
+        left: 61,
+        class: "gold-1",
+      },
+      {
+        id: "sm-gold",
+        top: 49,
+        left: 15,
+        class: "gold-2",
+      },
+      {
+        id: "sm-gold",
+        top: 55,
+        left: 68,
+        class: "gold-2",
+      },
+      {
+        id: "s-gold",
+        top: 41,
+        left: 81,
+        class: "gold-2",
+      },
+      {
+        id: "r-stone",
+        top: 67,
+        left: 66,
+        class: "stone-2",
+      },
+      {
+        id: "r-stone",
+        top: 48,
+        left: 46,
+        class: "stone-2",
+      },
+      {
+        id: "r-stone",
+        top: 41,
+        left: 39,
+        class: "stone-2",
+      },
+      {
+        id: "t-stone",
+        top: 56,
+        left: 75,
+        class: "stone-1",
+      },
+      {
+        id: "t-stone",
+        top: 45,
+        left: 74,
+        class: "stone-1",
+      },
+      {
+        id: "t-stone",
+        top: 55,
+        left: 59,
+        class: "stone-1",
+      },
+      {
+        id: "t-stone",
+        top: 58,
+        left: 21,
+        class: "stone-1",
+      },
+      {
+        id: "diamond",
+        top: 66,
+        left: 72,
+        class: "diamond",
+      },
+      {
+        id: "mystery-bag",
+        top: 51,
+        left: 53,
+        class: "mystery-bag",
+      },
 
+      {
+        map: "map-2",
+      },
+    ],
+    [
+      {
+        id: "mystery-bag",
+        top: 68,
+        left: 44,
+        class: "mystery-bag",
+      },
+      {
+        id: "mystery-bag",
+        top: 49,
+        left: 26,
+        class: "mystery-bag",
+      },
+      {
+        id: "mystery-bag",
+        top: 40,
+        left: 73,
+        class: "mystery-bag",
+      },
+      {
+        id: "mystery-bag",
+        top: 53,
+        left: 65,
+        class: "mystery-bag",
+      },
+      {
+        id: "m-gold",
+        top: 71,
+        left: 54,
+        class: "gold-3",
+      },
+      {
+        id: "m-gold",
+        top: 67,
+        left: 30,
+        class: "gold-3",
+      },
+      {
+        id: "t-stone",
+        top: 76,
+        left: 21,
+        class: "stone-1",
+      },
+      {
+        id: "t-stone",
+        top: 34,
+        left: 78,
+        class: "stone-1",
+      },
+      {
+        id: "t-stone",
+        top: 32,
+        left: 24,
+        class: "stone-1",
+      },
+      {
+        id: "r-stone",
+        top: 56,
+        left: 58,
+        class: "stone-2",
+      },
+      {
+        id: "sm-gold",
+        top: 49,
+        left: 57,
+        class: "gold-2",
+      },
+      {
+        id: "s-gold",
+        top: 27,
+        left: 22,
+        class: "gold-1",
+      },
+      {
+        id: "s-gold",
+        top: 39,
+        left: 68,
+        class: "gold-1",
+      },
+      {
+        id: "s-gold",
+        top: 33,
+        left: 66,
+        class: "gold-1",
+      },
+      {
+        id: "pig",
+        top: 55,
+        left: 60,
+        itemScaleX: true,
+        class: "pig",
+        start: maxMap * 0.1,
+        end: maxMap * 0.8,
+      },
+      {
+        id: "pig",
+        top: 48,
+        left: 68,
+        itemScaleX: false,
+        class: "pig",
+        start: maxMap * 0.4,
+        end: maxMap,
+      },
+      {
+        id: "pig",
+        top: 36,
+        left: 27,
+        itemScaleX: true,
+        class: "pig",
+        start: maxMap * 0.1,
+        end: maxMap * 0.5,
+      },
+      {
+        map: "map-1",
+      },
+    ],
+    [
+      {
+        id: "l-gold",
+        top: 71,
+        left: 0,
+        class: "gold-4",
+      },
+      {
+        id: "l-gold",
+        top: 63,
+        left: 89,
+        class: "gold-4",
+      },
+      {
+        id: "m-gold",
+        top: 76,
+        left: 29,
+        class: "gold-3",
+      },
+      {
+        id: "m-gold",
+        top: 71,
+        left: 52,
+        class: "gold-3",
+      },
+      {
+        id: "sm-gold",
+        top: 48,
+        left: 37,
+        class: "gold-2",
+      },
+      {
+        id: "sm-gold",
+        top: 36,
+        left: 76,
+        class: "gold-2",
+      },
+      {
+        id: "s-gold",
+        top: 25,
+        left: 22,
+        class: "gold-1",
+      },
+      {
+        id: "s-gold",
+        top: 28,
+        left: 29,
+        class: "gold-1",
+      },
+      {
+        id: "s-gold",
+        top: 69,
+        left: 22,
+        class: "gold-1",
+      },
+      {
+        id: "s-gold",
+        top: 57,
+        left: 57,
+        class: "gold-1",
+      },
+      {
+        id: "diamond",
+        top: 73,
+        left: 13,
+        class: "diamond",
+      },
+      {
+        id: "diamond",
+        top: 67,
+        left: 81,
+        class: "diamond",
+      },
+      {
+        id: "diamond",
+        top: 79,
+        left: 70,
+        class: "diamond",
+      },
+      {
+        id: "mystery-bag",
+        top: 74,
+        left: 62,
+        class: "mystery-bag",
+      },
+      {
+        id: "r-stone",
+        top: 56,
+        left: 50,
+        class: "stone-2",
+      },
+      {
+        id: "t-stone",
+        top: 31,
+        left: 22,
+        class: "stone-1",
+      },
+      {
+        id: "t-stone",
+        top: 55,
+        left: 32,
+        class: "stone-1",
+      },
+      {
+        id: "t-stone",
+        top: 42,
+        left: 69,
+        class: "stone-1",
+      },
+      {
+        id: "pig",
+        top: 62,
+        left: 28,
+        itemScaleX: true,
+        class: "pig",
+        start: maxMap * 0.1,
+        end: maxMap * 0.5,
+      },
+      {
+        id: "pig",
+        top: 58,
+        left: 40,
+        itemScaleX: false,
+        class: "pig",
+        start: maxMap,
+        end: maxMap * 0.5,
+      },
+      {
+        id: "pig",
+        top: 43,
+        left: 60,
+        itemScaleX: true,
+        class: "pig",
+        start: maxMap * 0.1,
+        end: maxMap * 0.6,
+      },
+      {
+        map: "map-3",
+      },
+    ],
+    [
+      {
+        id: "l-gold",
+        top: 79,
+        left: 38,
+        class: "gold-4",
+      },
+      {
+        id: "sm-gold",
+        top: 70,
+        left: 8,
+        class: "gold-2",
+      },
+      {
+        id: "sm-gold",
+        top: 80,
+        left: 19,
+        class: "gold-2",
+      },
+      {
+        id: "sm-gold",
+        top: 84,
+        left: 63,
+        class: "gold-2",
+      },
+      {
+        id: "s-gold",
+        top: 63,
+        left: 25,
+        class: "gold-1",
+      },
+      {
+        id: "s-gold",
+        top: 78,
+        left: 34,
+        class: "gold-1",
+      },
+      {
+        id: "s-gold",
+        top: 57,
+        left: 55,
+        class: "gold-1",
+      },
+      {
+        id: "s-gold",
+        top: 63,
+        left: 71,
+        class: "gold-1",
+      },
+      {
+        id: "s-gold",
+        top: 60,
+        left: 74,
+        class: "gold-1",
+      },
+      {
+        id: "s-gold",
+        top: 77,
+        left: 74,
+        class: "gold-1",
+      },
+      {
+        id: "s-gold",
+        top: 70,
+        left: 82,
+        class: "gold-1",
+      },
+      {
+        id: "diamondPig",
+        top: 68,
+        left: 32,
+        itemScaleX: false,
+        class: "pig d-pig",
+        start: maxMap * 0.6,
+        end: 0,
+      },
+      {
+        id: "diamondPig",
+        top: 37,
+        left: 50,
+        itemScaleX: true,
+        class: "pig d-pig",
+        start: maxMap * 0,
+        end: maxMap * 0.5,
+      },
+      {
+        id: "diamondPig",
+        top: 35,
+        left: 56,
+        itemScaleX: false,
+        class: "pig d-pig",
+        start: maxMap,
+        end: maxMap * 0.5,
+      },
+      {
+        id: "diamondPig",
+        top: 45,
+        left: 76,
+        itemScaleX: true,
+        class: "pig d-pig",
+        start: maxMap * 0.4,
+        end: maxMap * 0.9,
+      },
+      {
+        id: "t-stone",
+        top: 30,
+        left: 12,
+        class: "stone-1",
+      },
+      {
+        id: "t-stone",
+        top: 52,
+        left: 48,
+        class: "stone-1",
+      },
+      {
+        id: "t-stone",
+        top: 57,
+        left: 86,
+        class: "stone-1",
+      },
+      {
+        id: "r-stone",
+        top: 58,
+        left: 20,
+        class: "stone-2",
+      },
+      {
+        id: "r-stone",
+        top: 35,
+        left: 36,
+        class: "stone-2",
+      },
+      {
+        id: "r-stone",
+        top: 31,
+        left: 69,
+        class: "stone-2",
+      },
+      {
+        id: "mystery-bag",
+        top: 68,
+        left: 76,
+        class: "mystery-bag",
+      },
+      {
+        map: "map-4",
+      },
+    ],
+    [
+      {
+        id: "tnt_barrel",
+        top: 61,
+        left: 58,
+        class: "tnt_barrel",
+      },
+      {
+        id: "tnt_barrel",
+        top: 61,
+        left: 37,
+        class: "tnt_barrel",
+      },
+      {
+        id: "l-gold",
+        top: 71,
+        left: 25,
+        class: "gold-4",
+      },
+      {
+        id: "l-gold",
+        top: 78,
+        left: 45,
+        class: "gold-4",
+      },
+      {
+        id: "l-gold",
+        top: 71,
+        left: 64,
+        class: "gold-4",
+      },
+      {
+        id: "mystery-bag",
+        top: 40,
+        left: 71,
+        class: "mystery-bag",
+      },
+      {
+        id: "bone",
+        top: 37,
+        left: 67,
+        class: "bone",
+      },
+      {
+        id: "skull",
+        top: 40,
+        left: 65,
+        class: "skull",
+      },
+      {
+        id: "skull",
+        top: 45,
+        left: 24,
+        class: "skull",
+      },
+      {
+        id: "m-gold",
+        top: 24,
+        left: 10,
+        class: "gold-3",
+      },
+      {
+        id: "m-gold",
+        top: 32,
+        left: 83,
+        class: "gold-3",
+      },
+      {
+        id: "s-gold",
+        top: 38,
+        left: 17,
+        class: "gold-1",
+      },
+      {
+        id: "s-gold",
+        top: 34,
+        left: 49,
+        class: "gold-1",
+      },
+      {
+        id: "pig",
+        top: 60,
+        left: 63,
+        itemScaleX: false,
+        class: "pig",
+        start: maxMap * 0.1,
+        end: maxMap * 0.5,
+      },
+      {
+        id: "pig",
+        top: 29,
+        left: 70,
+        itemScaleX: true,
+        class: "pig",
+        start: maxMap * 0.5,
+        end: maxMap,
+      },
+      {
+        id: "pig",
+        top: 44,
+        left: 61,
+        itemScaleX: true,
+        class: "pig",
+        start: maxMap * 0.4,
+        end: maxMap * 0.8,
+      },
+      {
+        id: "pig",
+        top: 56,
+        left: 45,
+        itemScaleX: true,
+        class: "pig",
+        start: maxMap * 0.018,
+        end: maxMap * 0.5,
+      },
+      {
+        id: "pig",
+        top: 60,
+        left: 64,
+        itemScaleX: false,
+        class: "pig",
+        start: maxMap * 0.9,
+        end: maxMap * 0.6,
+      },
+      {
+        id: "pig",
+        top: 45,
+        left: 36,
+        itemScaleX: false,
+        class: "pig",
+        start: maxMap * 0.024,
+        end: maxMap * 0.5,
+      },
+      {
+        map: "map-3",
+      },
+    ],
+    [
+      {
+        map: "map-4",
+      },
+    ],
+  ];
+});
 const elements = $$(".myElement");
 for (const element of elements) {
   element.addEventListener("mousedown", (e) => {
@@ -520,12 +1085,13 @@ class GoldMiner {
   largeGold = 500;
   diamond = 600;
   pig = 2;
-  pigDiamond = this.diamond + this.pig;
+  diamondPig = this.diamond + this.pig;
   bone = 2;
   skull = 20;
   roundStone = 11;
   triagleStone = 20;
-  TNT = 1;
+  TNT = 5;
+  TNTBarrel = 1;
   isClover = false;
   isEnegryDrink = false;
   isStoneBook = false;
@@ -576,21 +1142,21 @@ class GoldMiner {
       id: "r-stone",
       img: "gapda_2",
       size: "r-stone",
-      time: 4000,
+      time: 3000,
       bonus: this.roundStone,
     },
     {
       id: "t-stone",
       img: "gapda_1",
       size: "t-stone",
-      time: 4000,
+      time: 5000,
       bonus: this.triagleStone,
     },
     {
       id: "l-gold",
       img: "gapvang_1",
       size: "l-gold",
-      time: 6000,
+      time: 7000,
       bonus: this.largeGold,
     },
     {
@@ -634,6 +1200,34 @@ class GoldMiner {
       time: 1000,
       bonus: this.pig,
     },
+    {
+      id: "diamondPig",
+      img: "pullDiamondPig",
+      size: "p-dpig",
+      time: 1000,
+      bonus: this.diamondPig,
+    },
+    {
+      id: "tnt_barrel",
+      img: "gapTntVo",
+      size: "tnt-barrel",
+      time: 1000,
+      bonus: this.TNTBarrel,
+    },
+    {
+      id: "skull",
+      img: "pullSkull",
+      size: "p-skull",
+      time: 1000,
+      bonus: this.skull,
+    },
+    {
+      id: "bone",
+      img: "pullbone",
+      size: "p-bone",
+      time: 1000,
+      bonus: this.bone,
+    },
   ];
   mysteryBagValue = {
     maxMoney: 800,
@@ -653,6 +1247,7 @@ class GoldMiner {
   };
   pullItemFinish;
   plusMoneyTimeOut;
+  playGame;
   constructor() {}
   getItemByName(element) {
     const typeItem = this.getSecondClassName(element);
@@ -874,9 +1469,14 @@ class GoldMiner {
       html += `
       <div
       class="item absolute ${item.class} ${
-        item.class === "gold-1" ? "g-p-4 " : ""
-      } ${item.id === "pig" && item?.itemScaleX ? "overturned" : ""}"
-      data-id="${item.id}"
+        item.class === "gold-1" ? "g-p-4" : ""
+      }${item.id === "pig" && item?.itemScaleX ? "overturned" : ""}"data-id="${
+        item.id
+      }" ${
+        item.id === "pig" || item.id === "diamondPig"
+          ? `data-start="${item.start}" data-end="${item.end}"`
+          : ""
+      }
       style="top: ${item.top}%; left: ${item.left}%;">
       </div>
       `;
@@ -884,25 +1484,28 @@ class GoldMiner {
 
     mapMiner.innerHTML = html;
 
-    const pigs = $$(".pig");
+    let pigs = $$(".pig");
     if (pigs) {
-      const mapWidth = mapMiner.getBoundingClientRect();
-      const endMapWidth = mapWidth.width;
       for (const pig of pigs) {
+        let start = 0;
+        let end = 0;
+        start = pig.dataset.start;
+        end = pig.dataset.end;
+        // console.log(pig.dataset);
         pig.animate(
           [
             {
-              left: `0px`,
+              left: `${start}px`,
             },
             {
-              left: `${endMapWidth}px`,
+              left: `${end}px`,
             },
             {
-              left: `0px`,
+              left: `${start}px`,
             },
           ],
           {
-            duration: 10000,
+            duration: 7000,
             iterations: Infinity,
           }
         );
@@ -1025,24 +1628,24 @@ class GoldMiner {
     levelNumber.textContent = this.level;
   }
   handleCountDown() {
-    if (this.stopTime !== 0) {
-      clearInterval(this.stopTime);
-    }
-    let time = 60;
-    this.stopTime = setInterval(() => {
-      time--;
-      timeSet.textContent = `${time}`;
-      if (time === 0) {
-        if (this.money >= this.target) {
-          this.winGame();
-        } else {
-          this.loseGame();
-        }
-        this.stopAnimation();
-        clearInterval(this.stopTime);
-        this.stopTime = 0;
-      }
-    }, 1000);
+    // if (this.stopTime !== 0) {
+    //   clearInterval(this.stopTime);
+    // }
+    // let time = 60;
+    // this.stopTime = setInterval(() => {
+    //   time--;
+    //   timeSet.textContent = `${time}`;
+    //   if (time === 0) {
+    //     if (this.money >= this.target) {
+    //       this.winGame();
+    //     } else {
+    //       this.loseGame();
+    //     }
+    //     this.stopAnimation();
+    //     clearInterval(this.stopTime);
+    //     this.stopTime = 0;
+    //   }
+    // }, 1000);
   }
   restartGame() {
     this.level = 1;
@@ -1053,7 +1656,7 @@ class GoldMiner {
     this.isEnegryDrink = false;
     this.isPolishWater = false;
     this.isStoneBook = false;
-    // reset  background Map
+    // reset background Map
     this.removeSecondClass(mapMiner);
   }
   showMenu() {
@@ -1134,6 +1737,33 @@ class GoldMiner {
       this.shootEnd.removeEventListener("finish", this.handleFinishPull);
     }
   }
+  pointInCircle(x, y, cx, cy, radius) {
+    const distancesquared = (x - cx) * (x - cx) + (y - cy) * (y - cy);
+    return distancesquared <= radius * radius;
+  }
+  handleCheckItemHasInRound(item) {
+    const allItems = $$(".item");
+    const radius = 100;
+    const curItem = item;
+    const curItemLocation = item.getBoundingClientRect();
+
+    for (const item of allItems) {
+      const iLocation = item.getBoundingClientRect();
+      if (
+        item !== curItem &&
+        this.pointInCircle(
+          iLocation.x,
+          iLocation.y,
+          curItemLocation.x + curItemLocation.width / 2,
+          curItemLocation.y + curItemLocation.height / 2,
+          radius
+        )
+      ) {
+        console.log("This item got boom !!!", item);
+        item.remove();
+      }
+    }
+  }
   handleEvent() {
     const wireLength = hookWire.offsetHeight;
     const map = $(".background");
@@ -1141,7 +1771,6 @@ class GoldMiner {
     const diagonalLength = Math.sqrt(
       Math.pow(map.offsetWidth, 2) + Math.pow(map.offsetHeight, 2)
     );
-
     const shake = [
       {
         transform: "rotate(60deg)",
@@ -1169,9 +1798,12 @@ class GoldMiner {
       iterations: Infinity,
     });
 
-    document.addEventListener("keyup", (e) => {
-      if (e.key === "ArrowUp" && this.TNT >= 1 && this.isPullUp === true) {
-        console.log("Boom");
+    this.playGame = (e) => {
+      if (
+        (e?.key === "ArrowUp" || e?.button === 2) &&
+        this.TNT >= 1 &&
+        this.isPullUp === true
+      ) {
         let count = 1;
         const firstChild = 0;
         const modifyIndex = 1;
@@ -1212,12 +1844,12 @@ class GoldMiner {
         return;
         // return to avoid code from running below due to setDrop being set to false
       }
-      if(!this.isDrop) {
+      if (!this.isDrop) {
         this.hook.play();
       }
       if (this.isDrop) return;
 
-      if (e.key === "ArrowDown") {
+      if (e?.key === "ArrowDown" || e?.button === 0) {
         this.hook.pause();
         this.setDrop(true);
         this.shoot = hookWire.animate(shootOut, {
@@ -1232,7 +1864,7 @@ class GoldMiner {
           if (
             hookLocation.left <= background.left ||
             hookLocation.top >= background.bottom ||
-            hookLocation.right >= background.right
+            (hookLocation.right >= background.right && !this.isPullUp)
           ) {
             this.shoot.pause();
             this.hook.pause();
@@ -1256,44 +1888,73 @@ class GoldMiner {
           const [iscollide, id, item] = this.handlePullItem();
           if (iscollide) {
             const findItem = this.Items.find((item) => item.id === id);
-            this.isPullUp = true;
-            handleHook.src = `./src/public/images/${findItem.img}.png`;
-            handleHook.classList.add(`${findItem.size}`);
-
-            let promise;
-            if (findItem.id === "l-gold") {
-              promise = this.checkStatus("cool");
-            } else if (
-              findItem.id === "mystery-bag" ||
-              findItem.id === "sm-gold" ||
-              findItem.id === "s-gold" ||
-              findItem.id === "m-gold"
-            ) {
-              promise = this.checkStatus("good");
-            } else {
-              promise = this.checkStatus("bad");
-            }
-            promise.then(() => {
-              audio.src = "./src/public/sounds/up.mp3";
-              this.pullUp = setInterval(() => {
-                audio.play();
-              }, 1000);
-            });
-
             // Set pull time
             this.setPullTime(findItem.time);
-            handleHook.addEventListener("load", () => {
-              item.remove();
-            });
-
-            this.shoot.pause();
+            console.log(this.pullTime);
             this.shootEnd = hookWire.animate([{ height: `${wireLength}px` }], {
               duration: this.pullTime,
               iterations: 1,
               fill: "forwards",
             });
+            this.shootEnd.pause();
+
+            if (item.dataset.id === "tnt_barrel") {
+              handleHook.src = `./src/public/images/BoomEffect.png`;
+              handleHook.classList.add(`tnt-barrel-boom`);
+              boomAudio.play();
+              this.handleCheckItemHasInRound(item);
+              this.shoot.pause();
+              setTimeout(() => {
+                item.remove();
+                handleHook.src = `./src/public/images/gapTntVo.png`;
+                this.removeSecondClass(handleHook);
+                handleHook.classList.add(`tnt-barrel`);
+                this.shootEnd.play();
+              }, 200);
+            } else {
+              handleHook.src = `./src/public/images/${findItem.img}.png`;
+              handleHook.classList.add(`${findItem.size}`);
+
+              let promise;
+              if (findItem.id === "l-gold") {
+                promise = this.checkStatus("cool");
+              } else if (
+                findItem.id === "mystery-bag" ||
+                findItem.id === "sm-gold" ||
+                findItem.id === "s-gold" ||
+                findItem.id === "m-gold" ||
+                findItem.id === "diamondPig"
+              ) {
+                promise = this.checkStatus("good");
+              } else {
+                promise = this.checkStatus("bad");
+              }
+              promise.then(() => {
+                audio.src = "./src/public/sounds/up.mp3";
+                this.pullUp = setInterval(() => {
+                  audio.play();
+                }, 1000);
+              });
+
+              this.shoot.pause();
+              // this.shootEnd = hookWire.animate(
+              //   [{ height: `${wireLength}px` }],
+              //   {
+              //     duration: this.pullTime,
+              //     iterations: 1,
+              //     fill: "forwards",
+              //   }
+              // );
+              this.shootEnd.play();
+            }
+
+            this.isPullUp = true;
+            handleHook.addEventListener("load", () => {
+              item.remove();
+            });
 
             this.handleFinishPull = () => {
+              this.isPullUp = false;
               handleHook.src = "./src/public/images/moc_out.png";
               this.shoot.pause();
               clearInterval(this.pullUp);
@@ -1338,13 +1999,18 @@ class GoldMiner {
         //   clearInterval(this.dropHook);
         // });
       }
+    };
+    document.addEventListener("keyup", (e) => {
+      this.playGame(e);
     });
     // End
     // PrevenDefault contextmenu;
-    app.addEventListener("contextmenu", function (e) {
+    app.addEventListener("contextmenu", (e) => {
       e.preventDefault();
     });
-    app.addEventListener("mouseup", (e) => {});
+    mapMiner.addEventListener("mouseup", (e) => {
+      this.playGame(e);
+    });
     // End
 
     // Next game
@@ -1365,6 +2031,7 @@ class GoldMiner {
     // End
   }
   loadGame() {
+    this.level = this.level >= 7 ? (this.level = 1) : this.level;
     // can drop hook
     this.setDrop(false);
     // Enđ
@@ -1373,7 +2040,7 @@ class GoldMiner {
     this.isPull = false;
     // Enđ
 
-    // Sake hook
+    // Shake hook
     if (this.hook) {
       this.hook.play();
     }
@@ -1408,6 +2075,7 @@ class GoldMiner {
   menu() {
     playGame.addEventListener("click", () => {
       startGame.style.opacity = "0";
+      playGame.classList.add("hidden-item");
       audio.src = "./src/public/sounds/goal.mp3";
       audio.addEventListener("canplaythrough", () => {
         audio.play();
@@ -1415,6 +2083,7 @@ class GoldMiner {
       setTimeout(() => {
         startGame.style.display = "none";
 
+        playGame.classList.remove("hidden-item");
         this.loadGame();
         this.closeShowPassLevel();
         this.handleCountDown();
@@ -1433,21 +2102,16 @@ class GoldMiner {
     });
   }
   start() {
-    document.addEventListener("DOMContentLoaded", () => {
-      // Hàm sử lý sự kiện
-      this.handleEvent();
-      // Start game
-      this.menu();
-      // Set this
-      _This = this;
-    });
+    // Hàm sử lý sự kiện
+    this.handleEvent();
+    // Start game
+    this.menu();
+    // Set this
+    _This = this;
   }
 }
 
 const game = new GoldMiner();
-game.start();
-
-const html = ``;
-const render = (item) => {
-  app.innerHTML = item;
-};
+document.addEventListener("DOMContentLoaded", () => {
+  game.start();
+});

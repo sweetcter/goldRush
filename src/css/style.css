@@ -91,7 +91,7 @@ html {
     transform: translate(-14px, 0);
     transform: translate(-146px, -6px);
   }
-  to{
+  to {
     opacity: 0;
   }
 }
@@ -143,6 +143,7 @@ html {
   min-height: 30px;
   height: 30px;
   z-index: 2;
+  top: 10px;
 }
 .header__exit:active {
   transform: translateY(4px);
@@ -182,9 +183,9 @@ html {
   width: 34px;
 }
 .hook.t-stone {
-  top: calc(100% - 3px);
-  right: -24px;
-  width: 60px;
+  top: calc(100% - 4px);
+  right: -22px;
+  width: 56px;
 }
 .hook.s-gold {
   top: calc(100% - 1px);
@@ -207,9 +208,9 @@ html {
   width: 80px;
 }
 .hook.m-bag {
-  top: calc(100% - 12px);
-  right: -14px;
-  width: 40px;
+  top: calc(100% - 8px);
+  right: -17px;
+  width: 38px;
 }
 .hook.dia {
   top: calc(100% - 1px);
@@ -223,6 +224,41 @@ html {
   right: -17px;
   width: 34px;
   height: 34px;
+  object-fit: contain;
+}
+.hook.p-dpig {
+  top: calc(100% - 28px);
+  right: -38px;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+.hook.tnt-barrel {
+  top: calc(100% - 2px);
+  right: -14px;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+.hook.tnt-barrel-boom {
+  top: calc(100% - 50px);
+  right: -60px;
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+}
+.hook.p-bone {
+  top: calc(100% - 6px);
+  right: -15px;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+.hook.p-skull {
+  top: calc(100% - 6px);
+  right: -15px;
+  width: 26px;
+  height: 26px;
   object-fit: contain;
 }
 .start-line {
@@ -261,8 +297,8 @@ html {
 .stone-1 {
   background-repeat: no-repeat;
   background-image: url("../public/images/da_1.png");
-  width: 50px;
-  height: 50px;
+  width: 5.8%;
+  height: 9%;
   background-size: contain;
 }
 .g-p-4 {
@@ -271,57 +307,85 @@ html {
 .stone-2 {
   background-repeat: no-repeat;
   background-image: url("../public/images/da_2.png");
-  width: 38px;
-  height: 38px;
+  width: 4.6%;
+  height: 7.1%;
   background-size: contain;
 }
 .gold-4 {
   background-repeat: no-repeat;
   background-image: url("../public/images/vang_1.png");
-  width: 80px;
-  height: 80px;
+  width: 10%;
+  height: 16%;
   background-size: contain;
 }
 .gold-3 {
   background-repeat: no-repeat;
   background-image: url("../public/images/vang_2.png");
-  width: 64px;
-  height: 64px;
+  width: 8%;
+  height: 12.5%;
   background-size: contain;
 }
 .gold-2 {
   background-repeat: no-repeat;
   background-image: url("../public/images/vang_3.png");
-  width: 32px;
-  height: 32px;
+  width: 4%;
+  height: 6.3%;
   background-size: contain;
 }
 .gold-1 {
   background-repeat: no-repeat;
   background-image: url("../public/images/vang_4.png");
-  width: 18px;
-  height: 18px;
+  width: 2.3%;
+  height: 3.6%;
   background-size: contain;
 }
 .mystery-bag {
   background-repeat: no-repeat;
   background-image: url("../public/images/mysteryBag.png");
-  width: 46px;
-  height: 46px;
+  width: 5%;
+  height: 8%;
   background-size: contain;
 }
 .diamond {
   background-image: url("../public/images/diamond.png");
   background-repeat: no-repeat;
-  width: 22px;
-  height: 22px;
+  width: 2.8%;
+  height: 4.3%;
   background-size: contain;
 }
 .pig {
   background-image: url("../public/images/pig.png");
   background-repeat: no-repeat;
-  width: 40px;
-  height: 40px;
+  width: 5%;
+  height: 5%;
+  background-size: contain;
+}
+.d-pig {
+  background-image: url("../public/images/diamondPig.png");
+  background-repeat: no-repeat;
+  width: 5%;
+  height: 5%;
+  background-size: contain;
+}
+.tnt_barrel {
+  background-image: url("../public/images/tnt_out.png");
+  background-repeat: no-repeat;
+  width: 6.8%;
+  height: 10.6%;
+  background-size: contain;
+}
+.bone {
+  background-image: url("../public/images/bone.png");
+  background-repeat: no-repeat;
+  width: 3.3%;
+  height: 5.1%;
+  background-size: contain;
+}
+.skull {
+  background-image: url("../public/images/skull.png");
+  background-repeat: no-repeat;
+  width: 3.3%;
+  height: 5.1%;
   background-size: contain;
 }
 /* End */
@@ -331,8 +395,9 @@ html {
   object-fit: contain;
 }
 .items {
-  padding-left: 331px;
-  margin-top: 38px;
+  position: absolute;
+  bottom: 0;
+  right: 28%;
 }
 .gunpowder {
   display: inline-block;
@@ -356,7 +421,7 @@ html {
 .miner {
   position: absolute;
   top: 0;
-  right: 300px;
+  right: 23%;
   background-repeat: no-repeat;
   background-image: url("../public/images/startMenu_out.png");
   width: 680px;
@@ -401,7 +466,7 @@ html {
   position: absolute;
   top: 9rem;
   left: 7rem;
-  font-size: 32px;
+  font-size: 2rem;
   color: #eedd00;
   font-weight: 600;
   text-shadow: 2px 2px #000;
@@ -411,8 +476,8 @@ html {
 }
 .guide {
   position: absolute;
-  bottom: -6rem;
-  left: 14rem;
+  bottom: -23%;
+  left: 18%;
   background-repeat: no-repeat;
   background-image: url("../public/images/huongdan_out.png");
   width: 300px;
@@ -439,6 +504,7 @@ html {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 50%;
   transform: translate(-50%, -50%);
   font-size: 1.8rem;
   padding: 64px 44px 30px 44px;
