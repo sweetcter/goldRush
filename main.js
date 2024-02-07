@@ -1069,7 +1069,7 @@ for (const element of elements) {
 }
 
 class GoldMiner {
-  money = 10000;
+  money = 0;
   target = 650;
   isBuy = false;
   isDrop = false;
