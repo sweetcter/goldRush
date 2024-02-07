@@ -1628,24 +1628,24 @@ class GoldMiner {
     levelNumber.textContent = this.level;
   }
   handleCountDown() {
-    // if (this.stopTime !== 0) {
-    //   clearInterval(this.stopTime);
-    // }
-    // let time = 60;
-    // this.stopTime = setInterval(() => {
-    //   time--;
-    //   timeSet.textContent = `${time}`;
-    //   if (time === 0) {
-    //     if (this.money >= this.target) {
-    //       this.winGame();
-    //     } else {
-    //       this.loseGame();
-    //     }
-    //     this.stopAnimation();
-    //     clearInterval(this.stopTime);
-    //     this.stopTime = 0;
-    //   }
-    // }, 1000);
+    if (this.stopTime !== 0) {
+      clearInterval(this.stopTime);
+    }
+    let time = 60;
+    this.stopTime = setInterval(() => {
+      time--;
+      timeSet.textContent = `${time}`;
+      if (time === 0) {
+        if (this.money >= this.target) {
+          this.winGame();
+        } else {
+          this.loseGame();
+        }
+        this.stopAnimation();
+        clearInterval(this.stopTime);
+        this.stopTime = 0;
+      }
+    }, 1000);
   }
   restartGame() {
     this.level = 1;
