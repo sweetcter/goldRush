@@ -1069,7 +1069,7 @@ for (const element of elements) {
 }
 
 class GoldMiner {
-  money = 0;
+  money = 10000;
   target = 650;
   isBuy = false;
   isDrop = false;
@@ -1078,7 +1078,7 @@ class GoldMiner {
   isPullUp = false;
   mapWidth = mapMiner.offsetWidth;
   mapHeight = mapMiner.offsetHeight;
-  level = 1;
+  level = 3;
   smallGold = 50;
   smallMediumGold = 100;
   mediumGold = 250;
@@ -1289,6 +1289,7 @@ class GoldMiner {
       const randomItemIndex = Math.floor(Math.random() * this.itemStore.length);
       const itemRandom = this.itemStore[randomItemIndex];
       const itemRandomCost = this.getCost();
+
       storeList.innerHTML = this.itemStore
         .map((item, index) => {
           return `<div class="store__list-item ${
@@ -1352,6 +1353,9 @@ class GoldMiner {
   setMoney(itemMoney = 0) {
     this.money += itemMoney;
     moneyContainer.textContent = `$${this.money}`;
+    if (this.money >= this.target) {
+      exitBtn.classList.add("success");
+    }
   }
   plusMoney(findItem) {
     const rStoneIndex = 0;
@@ -1562,7 +1566,7 @@ class GoldMiner {
         } else {
           this.setPolish();
         }
-        item.remove();
+        item.classList.add("hidden-item");
       });
     }
     // End
@@ -1631,7 +1635,7 @@ class GoldMiner {
     if (this.stopTime !== 0) {
       clearInterval(this.stopTime);
     }
-    let time = 60;
+    let time = 100000;
     this.stopTime = setInterval(() => {
       time--;
       timeSet.textContent = `${time}`;
@@ -1759,7 +1763,6 @@ class GoldMiner {
           radius
         )
       ) {
-        console.log("This item got boom !!!", item);
         item.remove();
       }
     }
@@ -1828,6 +1831,7 @@ class GoldMiner {
           iterations: 1,
           fill: "forwards",
         });
+
         this.shootEnd.pause();
         this.shoot.pause();
         this.isPull = false;
@@ -1852,19 +1856,21 @@ class GoldMiner {
       if (e?.key === "ArrowDown" || e?.button === 0) {
         this.hook.pause();
         this.setDrop(true);
+
         this.shoot = hookWire.animate(shootOut, {
           duration: 2000,
           iterations: 1,
         });
-        // console.log(map.getBoundingClientRect());
+
         this.dropHook = setInterval(() => {
           const hookLocation = handleHook.getBoundingClientRect();
 
           const background = map.getBoundingClientRect();
           if (
-            hookLocation.left <= background.left ||
-            hookLocation.top >= background.bottom ||
-            (hookLocation.right >= background.right && !this.isPullUp)
+            (hookLocation.left <= background.left ||
+              hookLocation.top >= background.bottom ||
+              hookLocation.right >= background.right) &&
+            !this.isPullUp
           ) {
             this.shoot.pause();
             this.hook.pause();
@@ -1887,6 +1893,8 @@ class GoldMiner {
           // Check to see if the hook touches any items
           const [iscollide, id, item] = this.handlePullItem();
           if (iscollide) {
+            console.log(this.pullTime);
+            console.log(this.isEnegryDrink);
             const findItem = this.Items.find((item) => item.id === id);
             // Set pull time
             this.setPullTime(findItem.time);
@@ -2005,7 +2013,7 @@ class GoldMiner {
     });
     // End
     // PrevenDefault contextmenu;
-    app.addEventListener("contextmenu", (e) => {
+    container.addEventListener("contextmenu", (e) => {
       e.preventDefault();
     });
     mapMiner.addEventListener("mouseup", (e) => {
@@ -2070,6 +2078,11 @@ class GoldMiner {
       if (item?.map) {
         mapMiner.classList.add(`${item.map}`);
       }
+    }
+    if (this.money >= this.target) {
+      exitBtn.classList.add("success");
+    } else {
+      exitBtn.classList.remove("success");
     }
   }
   menu() {

@@ -1,4 +1,180 @@
-@media (max-width: 600px) {
+@media (min-width: 500px) {
+  .items {
+    bottom: 0;
+  }
+  .header__exit {
+    top: -12px;
+    left: 14%;
+  }
+  .gunpowder {
+    width: 20px;
+    height: 32px;
+  }
+  .header__stength {
+    font-size: 18px;
+  }
+  .player__bg {
+    width: 100px;
+    top: 13px;
+  }
+  .player {
+    position: absolute;
+    top: 0;
+    left: 50%;
+  }
+  .player__img {
+    top: 28px;
+    width: 50px;
+    height: 50px;
+  }
+  .header__right-wrapper {
+    margin-right: 10px;
+  }
+  .miner {
+    top: 70px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 300px;
+    height: 300px;
+  }
+  .gold {
+    top: 1rem;
+    left: -2rem;
+    width: 170px;
+    height: 170px;
+  }
+  .play {
+    top: 3rem;
+    left: 0rem;
+  }
+  .gold-blur {
+    top: -15px;
+    left: -4px;
+    width: 180px;
+    height: 180px;
+  }
+  .show__target {
+    width: 400px
+  }
+  .store__table{
+    width: 500px;
+  }
+  .trader__chat{
+    right: -60px;
+    width: 700px;
+    height: 210px;
+  }
+  .trader {
+    right: 270px;
+    width: 140px;
+    height: 140px;
+  }
+  .trader__chat-text {
+    font-size: 1.9rem;
+  }
+  .title__text {
+    margin-left: -114px;
+    transform: scale(0.8);
+  }
+  .title {
+    display: inline-flex;
+  }
+  .title__next-game {
+    font-size: 1rem;
+    min-width: 100px;
+  }
+  .store__list-wrapper {
+    gap: 18px;
+  }
+  .store__list-item {
+    width: 50px;
+    height: 50px;
+  }
+  .store__list-item-price  {
+    top: calc(100% + 20px);
+    left: -10px;
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 640px) {
+  .miner {
+    width: 350px;
+    height: 350px;
+  }
+  .gold {
+    top: 1rem;
+    left: -2rem;
+    width: 180px;
+    height: 180px;
+  }
+  .play {
+    top: 3rem;
+    left: 0.5rem;
+  }
+  .gold-blur {
+    top: -15px;
+    left: -4px;
+    width: 180px;
+    height: 180px;
+  }
+  .header__exit {
+    top: -16px;
+    left: -7%;
+  }
+  .gunpowder {
+    width: 24px;
+    height: 37px;
+  }
+  .player__bg {
+    width: 100px;
+    top: 13px;
+  }
+  .player {
+    position: absolute;
+    top: 0;
+    left: 50%;
+  }
+  .player__img {
+    top: 13px;
+    width: 70px;
+    height: 70px;
+  }
+  .store__table{
+    width: 640px;
+  }
+  .trader {
+    right: 170px;
+    width: 140px;
+    height: 140px;
+  }
+  .trader__chat-text {
+    font-size: 1.9rem;
+  }
+  .title__text {
+    margin-left: -70px;
+    transform: scale(0.8);
+  }
+  .title {
+    display: inline-flex;
+  }
+  .title__next-game {
+    font-size: 1rem;
+    min-width: 130px;
+  }
+  .store__list-wrapper {
+    gap: 32px;
+  }
+  .store__list-item {
+    width: 60px;
+    height: 60px;
+  }
+  .store__list-item-price  {
+    top: calc(100% + 20px);
+    left: -10px;
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 640px) {
   .hook-wire {
     position: absolute;
     top: 54px;
@@ -100,259 +276,428 @@
     height: 20px;
     object-fit: contain;
   }
-}
-@media (max-width: 800px) {
-  .show__target {
-    width: 50%;
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .player {
-    position: absolute;
-    top: 0;
-    left: 50%;
-  }
-  .header__level-number {
-    font-size: 18px;
-  }
-  .header__time-number {
+  .store__table-info {
     font-size: 14px;
-  }
-  .header__right {
-    margin-right: -6px;
-  }
-  .player__bg {
-    width: 100px;
-    top: 13px;
-  }
-  .header__right-wrapper {
-    font-size: 0.9rem;
-  }
-  .player__img {
-    top: 28px;
-    width: 50px;
-    height: 50px;
-  }
-  .header__left {
-    font-size: 0.9rem;
-  }
-  .show__target {
-    width: 75%;
-    font-size: 1.6rem;
-  }
-  .items {
-    position: absolute;
-    right: -142px;
-    bottom: -73px;
-  }
-  .header__exit {
-    top: -10px;
-    left: 25px;
-  }
-  .gunpowder {
-    width: 18px;
-    height: 24px;
+    bottom: 110px;
   }
 }
-@media (min-width: 475px) {
-  .guide {
-    width: 200px;
-    height: 200px;
-    left: 13%;
-    bottom: -2%;
-  }
+@media (min-width: 768px) {
   .miner {
     width: 400px;
     height: 400px;
   }
   .gold {
-    width: 120px;
-    height: 120px;
-    top: 5rem;
-    left: 3rem;
+    top: 1rem;
+    left: -2rem;
+    width: 200px;
+    height: 200px;
   }
   .play {
-    top: 6rem;
-    left: 4rem;
-    font-size: 1.4rem;
+    top: 4rem;
+    left: 1.2rem;
   }
   .gold-blur {
-    width: 150px;
-    height: 150px;
-    top: 2.6rem;
-    left: 2rem;
-  }
-}
-
-@media (min-width: 600px) {
-  .header__level-number {
-    font-size: 16px;
-  }
-  .header__time-number {
-    font-size: 14px;
-  }
-  .header__right {
-    margin-right: -6px;
-  }
-  .items {
-    position: absolute;
-    right: 21%;
-    bottom: 0%;
+    top: -14px;
+    left: 2px;
+    width: 200px;
+    height: 200px;
   }
   .header__exit {
-    top: -10px;
+    top: 8px;
+    left: 14%;
   }
   .gunpowder {
-    height: 23px;
+    width: 24px;
+    height: 40px;
   }
-  .guide {
-    width: 200px;
-    height: 200px;
-    left: 13%;
-    bottom: -2%;
+  .store__table {
+    width: 770px;
   }
-  .miner {
-    width: 480px;
-    height: 480px;
+  .trader {
+    right: 70px;
+    width: 140px;
+    height: 140px;
   }
-  .gold {
-    width: 160px;
-    height: 160px;
-    top: 6rem;
-    left: 3rem;
+  .trader__chat {
+    width: 780px;
   }
-  .play {
-    top: 8rem;
-    left: 5rem;
-    font-size: 1.8rem;
+  .trader__chat-text {
+    font-size: 1.9rem;
   }
-  .gold-blur {
-    width: 200px;
-    height: 200px;
-    top: 3rem;
-    left: 1rem;
+  .title__text {
+    transform: scale(0.8);
   }
-}
-@media (min-width: 724px) {
-  .header__level-number {
-    font-size: 20px;
+  .title {
+    display: flex;
   }
-  .header__time-number {
-    font-size: 18px;
+  .title__next-game {
+    font-size: 1rem;
+    min-width: 100px;
   }
-  .header__right {
-    margin-right: 0;
+  .store__list-wrapper {
+    gap: 40px;
   }
-  .items {
-    position: absolute;
-    bottom: 0;
-    right: 28%;
+  .store__list-item {
+    width: 70px;
+    height: 70px;
   }
-  .header__exit {
-    top: 10px;
-  }
-  .gunpowder {
-    width: 22px;
-    height: 34px;
-  }
-  .show__target {
-    width: 70%;
-    font-size: 1.4rem;
-  }
-  .guide {
-    width: 200px;
-    height: 200px;
-    left: 13%;
-  }
-  .miner {
-    width: 580px;
-    height: 580px;
-  }
-  .gold {
-    width: 200px;
-    height: 200px;
-    top: 6rem;
-    left: 4rem;
-  }
-  .play {
-    top: 9rem;
-    left: 7rem;
-    font-size: 1.8rem;
-  }
-  .gold-blur {
-    width: 230px;
-    height: 230px;
-    top: 4rem;
-    left: 3rem;
-  }
-}
-@media (min-width: 900px) {
-  .show__target {
-    width: 45%;
-    height: 200px;
-  }
-  .miner {
-    width: 580px;
-    height: 580px;
-  }
-  .gold {
-    width: 200px;
-    height: 200px;
-    top: 6rem;
-    left: 4rem;
-  }
-  .gold-blur {
-    width: 230px;
-    height: 230px;
-    top: 4rem;
-    left: 3rem;
-  }
-}
-@media (min-width: 800px) {
-  .show__target {
-    width: 48%;
-  }
-  .guide {
-    width: 250px;
-    height: 250px;
-    left: 6%;
-    bottom: -10%;
+  .store__list-item-price  {
+    top: calc(100% + 20px);
+    left: 50%;
+    font-size: 1.2rem;
+    transform: translateX(-50%);
   }
 }
 @media (min-width: 1024px) {
-  .guide {
-    width: 300px;
-    height: 300px;
-    left: 13%;
-  }
   .miner {
-    width: 580px;
-    height: 580px;
+    width: 450px;
+    height: 450px;
   }
   .gold {
-    width: 200px;
-    height: 200px;
-    top: 6rem;
-    left: 4rem;
+    top: 1rem;
+    left: -2rem;
+    width: 230px;
+    height: 230px;
+  }
+  .header__exit {
+    top: 8px;
+    left: 12%;
+  }
+  .play {
+    top: 5rem;
+    left: 2.2rem;
   }
   .gold-blur {
-    width: 260px;
-    height: 260px;
-    top: 3rem;
-    left: 1rem;
+    top: -14px;
+    left: 2px;
+    width: 240px;
+    height: 240px;
   }
 }
-@media (min-width: 1200px) {
-  .show__target {
-    width: 35%;
-    height: 250px;
+@media (min-width: 1280px) {
+  .miner {
+    width: 500px;
+    height: 500px;
+  }
+  .gold {
+    top: 1rem;
+    left: -2rem;
+    width: 260px;
+    height: 260px;
+  }
+  .play {
+    top: 5rem;
+    left: 3.2rem;
+  }
+  .gold-blur {
+    top: -14px;
+    left: 0;
+    width: 270px;
+    height: 270px;
   }
 }
 @media (min-width: 1536px) {
-  .show__target {
-    width: 35%;
-    height: 350px;
-  }
 }
+
+/* .hook-wire {
+  position: absolute;
+  top: 54px;
+  left: 48.4%;
+  width: 2px;
+  height: 20px;
+  z-index: 2;
+  transform-origin: top center;
+  background-color: #5f3926;
+}
+.hook {
+  position: absolute;
+  top: calc(100% - 6px);
+  right: -31px;
+  transform: rotate(2.6deg);
+  width: 64px;
+}
+.hook.r-stone {
+  top: calc(100% - 3px);
+  right: -11px;
+  width: 26px;
+}
+.hook.t-stone {
+  top: calc(100% - 3px);
+  right: -16px;
+  width: 40px;
+}
+.hook.s-gold {
+  top: calc(100% - 1px);
+  right: -17px;
+  width: 36px;
+}
+.hook.sm-gold {
+  top: calc(100% - 1px);
+  right: -29px;
+  width: 60px;
+}
+.hook.m-gold {
+  top: calc(100% - 3px);
+  right: -18px;
+  width: 38px;
+}
+.hook.l-gold {
+  top: calc(100% - 2px);
+  right: -24px;
+  width: 48px;
+}
+.hook.m-bag {
+  top: calc(100% - 6px);
+  right: -14px;
+  width: 32px;
+}
+.hook.dia {
+  top: calc(100% - 1px);
+  right: -8px;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.hook.p-pig {
+  top: calc(100% - 6px);
+  right: -14px;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+.hook.p-dpig {
+  top: calc(100% - 21px);
+  right: -28px;
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+}
+.hook.tnt-barrel {
+  top: calc(100% - 2px);
+  right: -12px;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+.hook.tnt-barrel-boom {
+  top: calc(100% - 50px);
+  right: -60px;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+.hook.p-bone {
+  top: calc(100% - 5px);
+  right: -11px;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+.hook.p-skull {
+  top: calc(100% - 2px);
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.show__target {
+  width: 50%;
+  font-size: 1.6rem;
+}
+
+.player {
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+.header__level-number {
+  font-size: 18px;
+}
+.header__time-number {
+  font-size: 14px;
+}
+.header__right {
+  margin-right: -6px;
+}
+.player__bg {
+  width: 100px;
+  top: 13px;
+}
+.header__right-wrapper {
+  font-size: 0.9rem;
+}
+.player__img {
+  top: 28px;
+  width: 50px;
+  height: 50px;
+}
+.header__left {
+  font-size: 0.9rem;
+}
+.show__target {
+  width: 75%;
+  font-size: 1.6rem;
+}
+.guide {
+  width: 200px;
+  height: 200px;
+  left: 13%;
+  bottom: -2%;
+}
+.miner {
+  width: 400px;
+  height: 400px;
+}
+.gold {
+  width: 120px;
+  height: 120px;
+  top: 5rem;
+  left: 3rem;
+}
+.play {
+  top: 6rem;
+  left: 4rem;
+  font-size: 1.4rem;
+}
+.gold-blur {
+  width: 150px;
+  height: 150px;
+  top: 2.6rem;
+  left: 2rem;
+}
+
+.header__level-number {
+  font-size: 16px;
+}
+.header__time-number {
+  font-size: 14px;
+}
+.header__right {
+  margin-right: -6px;
+}
+.guide {
+  width: 200px;
+  height: 200px;
+  left: 13%;
+  bottom: -2%;
+}
+.miner {
+  width: 480px;
+  height: 480px;
+}
+.gold {
+  width: 160px;
+  height: 160px;
+  top: 6rem;
+  left: 3rem;
+}
+.play {
+  top: 8rem;
+  left: 5rem;
+  font-size: 1.8rem;
+}
+.gold-blur {
+  width: 200px;
+  height: 200px;
+  top: 3rem;
+  left: 1rem;
+}
+.header__level-number {
+  font-size: 20px;
+}
+.header__time-number {
+  font-size: 18px;
+}
+.header__right {
+  margin-right: 0;
+}
+
+
+.show__target {
+  width: 70%;
+  font-size: 1.4rem;
+}
+.guide {
+  width: 200px;
+  height: 200px;
+  left: 13%;
+}
+.miner {
+  width: 580px;
+  height: 580px;
+}
+.gold {
+  width: 200px;
+  height: 200px;
+  top: 6rem;
+  left: 4rem;
+}
+.play {
+  top: 9rem;
+  left: 7rem;
+  font-size: 1.8rem;
+}
+.gold-blur {
+  width: 230px;
+  height: 230px;
+  top: 4rem;
+  left: 3rem;
+}
+.show__target {
+  width: 45%;
+  height: 200px;
+}
+.miner {
+  width: 580px;
+  height: 580px;
+}
+.gold {
+  width: 200px;
+  height: 200px;
+  top: 6rem;
+  left: 4rem;
+}
+.gold-blur {
+  width: 230px;
+  height: 230px;
+  top: 4rem;
+  left: 3rem;
+}
+.show__target {
+  width: 48%;
+}
+.guide {
+  width: 250px;
+  height: 250px;
+  left: 6%;
+  bottom: -10%;
+}
+.guide {
+  width: 300px;
+  height: 300px;
+  left: 13%;
+}
+.miner {
+  width: 580px;
+  height: 580px;
+}
+.gold {
+  width: 200px;
+  height: 200px;
+  top: 6rem;
+  left: 4rem;
+}
+.gold-blur {
+  width: 260px;
+  height: 260px;
+  top: 3rem;
+  left: 1rem;
+}
+.show__target {
+  width: 35%;
+  height: 250px;
+}
+.show__target {
+  width: 35%;
+  height: 350px;
+} */

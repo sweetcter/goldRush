@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 html {
-  font-family: "roboto";
+  font-family: "Roboto", sans-serif;
   color: #45474b;
   font-weight: 500;
   background-color: #834e2e;
@@ -57,7 +57,7 @@ html {
   justify-content: space-between;
   align-items: center;
   height: 72px;
-  background-color: #f4ce14;
+  background-color: #ffc700;
 }
 .header__stength {
   position: absolute;
@@ -75,11 +75,11 @@ html {
   opacity: 1;
 }
 .header__number {
-  color: #008000;
+  color: #379237;
 }
 
 .header__target-number {
-  color: #ff6c22;
+  color: #ff004d;
   font-size: 18px;
 }
 @keyframes pushLeft {
@@ -130,20 +130,25 @@ html {
   font-weight: 500;
   color: #11c211;
 }
-
+/* #F05941 */
+/* #54B435 */
 .header__exit {
   position: relative;
   display: inline-block;
   padding: 2px 15px;
   cursor: pointer;
-  background: #f5f7f8;
+  background: #f05941;
   border: 1px solid #495e57;
+  color: #fff;
   outline: none;
   border-radius: 6px;
   min-height: 30px;
   height: 30px;
   z-index: 2;
   top: 10px;
+}
+.header__exit.success {
+  background: #54b435;
 }
 .header__exit:active {
   transform: translateY(4px);
@@ -396,15 +401,20 @@ html {
 }
 .items {
   position: absolute;
-  bottom: 0;
-  right: 28%;
+  right: 25%;
+  bottom: -0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .gunpowder {
   display: inline-block;
   background-repeat: no-repeat;
-  background-image: url("../public/images/mine_out.png");
-  width: 22px;
-  height: 34px;
+  background-image: url("../public/images/mine.png");
+  width: 24px;
+  height: 40px;
+  margin: 0 -6px;
   background-size: contain;
 }
 .start {
@@ -504,7 +514,6 @@ html {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 50%;
   transform: translate(-50%, -50%);
   font-size: 1.8rem;
   padding: 64px 44px 30px 44px;
@@ -554,7 +563,7 @@ html {
 }
 .title__text {
   background-repeat: no-repeat;
-  width: 100%;
+  width: 430px;
   height: 64px;
   object-fit: contain;
   background-image: url("../public/images/store_title.png");
@@ -601,7 +610,7 @@ html {
   gap: 54px;
 }
 .store__list-item.tnt {
-  background-image: url("../public/images/mine_out.png");
+  background-image: url("../public/images/mine.png");
 }
 .store__list-item.enegry {
   background-image: url("../public/images/bottle_out.png");
@@ -685,4 +694,20 @@ html {
   left: 0;
   position: absolute;
   cursor: move;
+}
+
+.header__money-title,
+.header__time-title,
+.header__level-title,
+.header__target-title {
+  font-size: 1rem;
+}
+.header__exit {
+  font-size: 0.75rem;
+}
+.header__number,
+.header__target-number,
+.header__level-number,
+.header__time-number {
+  font-size: 1rem;
 }
