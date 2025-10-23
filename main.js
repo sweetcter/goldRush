@@ -1069,7 +1069,7 @@ for (const element of elements) {
 }
 
 class GoldMiner {
-  money = 10000;
+  money = 0;
   target = 650;
   isBuy = false;
   isDrop = false;
@@ -1078,7 +1078,7 @@ class GoldMiner {
   isPullUp = false;
   mapWidth = mapMiner.offsetWidth;
   mapHeight = mapMiner.offsetHeight;
-  level = 3;
+  level = 1;
   smallGold = 50;
   smallMediumGold = 100;
   mediumGold = 250;
@@ -1635,7 +1635,7 @@ class GoldMiner {
     if (this.stopTime !== 0) {
       clearInterval(this.stopTime);
     }
-    let time = 100000;
+    let time = 60;
     this.stopTime = setInterval(() => {
       time--;
       timeSet.textContent = `${time}`;
